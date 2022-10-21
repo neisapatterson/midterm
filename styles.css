@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap');
+/* nav {
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        display: flex;
+        flex-direction: row;
+        max-width: 100%;
+ }
+
+ #navLogo {
+        max-width: 100%;
+        width: 20vw;
+        padding-top: 0px;
+}
+
+.navBarSection {
+        border-top-width: 100px;
+        max-width: 100%;
+        width: 33%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+}
+
+.navBarText {
+        display: flex;
+        justify-content: right;
+        font-family: "Gafata";
+        font-size: 2.5em;
+} */
+nav {
+        overflow: hidden;
+        /* background-color: #f1f1f1; */
+        padding: 20px 10px;
+      }
+      
+      /* Style the header links */
+      nav a {
+        float: left;
+        color: black;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-family: 'Heebo';
+        font-size: 18px;
+        line-height: 25px;
+        border-radius: 4px;
+      }
+      
+      /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+      .logo {
+        max-width: 10%;
+        width: 2vw;
+        height: 1vh;
+      }
+      
+      /* Change the background color on mouse-over */
+      nav a:hover {
+        color: rgba(0,0,0,0.5);
+      }
+      
+      /* Style the active/current link*/
+      nav a.currentPage {
+        background-color: dodgerblue;
+        color: #FFFFFF;
+      }
+      
+      /* Float the link section to the right */
+      .navBarRight {
+        float: right;
+      }
+
+/* divider */
+
+#header {
+        max-width: 100%;
+        /* top: 10px;
+        position: relative; */
+    }
+     
+#header img {
+        height: 85vh;
+        width: 100%;
+        /* margin: none;
+        padding: none; */
+    }
+
+#taglineText {
+        position: absolute;
+        top: 75%;
+        left: 70%;
+        font-family: 'Heebo';
+        color: #FFFFFF;
+        transform: translate(-30%, -30%);
+        text-align: center;
+    }
+
+    #buyHome {
+        border-radius: 25px;
+        background-image: url("./images/beach.jpg");
+        background-size: cover;
+        height: 75vh;
+        width: 30%;
+        max-width: 100%;
+        margin-left: 10px;
+}
+
+#buyHome:hover {
+        transform: scale(1.05);
+}
+
+#sellHome {
+        border-radius: 25px;
+        background-image: url("./images/hotel_room.jpg");
+        background-size: cover;
+        height: 75vh;
+        width: 30%;
+        max-width: 100%;
+}
+
+#sellHome:hover {
+        transform: scale(1.05);
+}
+
+#rentHome {
+        background-image: url("./images/traveling.jpg");
+        background-size: cover;
+        height: 75vh;
+        width: 30%;
+        max-width: 100%;
+        border-radius: 25px;
+        margin-right: 10px;
+}
+
+#rentHome:hover {
+        transform: scale(1.05);
+}
+.homeContainer {
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+}
+
+.bookButton {
+        display: flex;
+        justify-content: center;
+        margin: 25px;
+}
+
+.button5 {
+        /* background-color: white; */
+        color: black;
+        border: 2px solid #555555;
+        border-radius: 5px;
+        padding: 12px;
+        justify-content: center;
+        align-items: center;
+      }
+      
+.button5:hover {
+        background-color: #555555;
+        color: white;
+}
+
+.reviewContainer {
+        display: flex;
+        flex-direction: row;
+        max-width: 100%;
+        /* background-color: #EEEDE7; */
+}
+.images {
+        width: 50%;
+        max-width: 100%;
+        padding-bottom: 2vh;
+        border-radius: 25px;
+
+}
+
+#discoverImage {
+        width: 75%;
+}
+
+
+.servicesSection {
+        display: flex;
+        max-width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+}
+
+.reviewSection {
+        display: flex;
+        max-width: 100%;
+        left: 70%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: "Heebo";
+        font-size: 1.5em;
+        text-align: center;
+        padding-left: 30px;
+}
+
+.discoverContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 25px;
+        flex-direction: column;
+}
