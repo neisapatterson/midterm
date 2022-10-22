@@ -2,11 +2,11 @@
 <html>
     <head>
         <title>Hotel Name</title>
-            <link rel="stylesheet" href="styles.css">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <style>
-            </style>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        </style>
     </head>
     <body>
         <nav>
@@ -23,8 +23,31 @@
             </div>
         </nav>
         <h2>Contact Us</h2>
-        <p> For hotel reservations, call 833-555-8284 or</p>
-        <a href = "https://neisapatterson.github.io/midterm/book.html" target = "_self">book online.</a>
+        <p> For hotel reservations, call 833-555-8284 or</p><a href = "https://neisapatterson.github.io/midterm/book.html" target = "_self">book online.</a>
         <p>For your safety and security, rates are not quoted via the form below.</p></p>
+        <div class="container">
+            <form action="/action_page.php">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Your email..">
+
+                <label for="reason">Reason for Reaching Out</label>
+                    <select id="reason" name="reason">
+                    <option value="question">Question</option>
+                    <option value="comment">Comment</option>
+                    <option value="complaint">Complaint</option>
+                    </select>
+
+                <label for="subject">Comments / Special Requests</label>
+                <textarea id="subject" name="subject" placeholder="..." style="height:200px"></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+    </div>
     </body>
 </html>
