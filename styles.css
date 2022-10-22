@@ -86,8 +86,21 @@ nav {
         /* margin: none;
         padding: none; */
     }
+#cheader img {
+        height: 85vh;
+        width: 100%;
+    }
 
 #taglineText {
+        position: absolute;
+        top: 75%;
+        left: 70%;
+        font-family: 'Heebo';
+        color: #FFFFFF;
+        transform: translate(-30%, -30%);
+        text-align: center;
+    }
+#ctaglineText {
         position: absolute;
         top: 75%;
         left: 70%;
