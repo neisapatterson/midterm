@@ -42,25 +42,30 @@
         <p>For your safety and security, rates are not quoted via the form below.</p></p>
         <div class="container">
             <form action="/action_page.php">
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-                
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" placeholder="Your email..">
-
-                <label for="reason">Reason for Reaching Out</label>
-                    <select id="reason" name="reason">
-                    <option value="question">Question</option>
-                    <option value="comment">Comment</option>
-                    <option value="complaint">Complaint</option>
-                    </select>
-
-                <label for="subject">Comments / Special Requests</label>
-                <textarea id="subject" name="subject" placeholder="..." style="height:200px"></textarea>
-
+                <div class="form-item">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                </div>
+                <div class="form-item">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                </div>
+                <div class="form-item">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email" placeholder="Your email..">
+                </div>
+                <div class="form-item">
+                        <label for="reason">Reason for Reaching Out</label>
+                            <select id="reason" name="reason">
+                            <option value="question">Question</option>
+                            <option value="comment">Comment</option>
+                            <option value="complaint">Complaint</option>
+                            </select>
+                </div>
+                <div class="form-item">
+                        <label for="subject">Comments / Special Requests</label>
+                        <textarea id="subject" name="subject" placeholder="..." style="height:200px"></textarea>
+                </div>
                 <input type="submit" value="Submit">
             </form>
     </div>
