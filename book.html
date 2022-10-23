@@ -1,0 +1,83 @@
+<html>
+    <head>
+            <title>Book a Room</title>
+            <link rel="stylesheet" href="styles.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <style >
+            </style>
+            <script src="book.js"></script>
+
+    </head>
+    <body>
+            <nav>
+                    <a href="#default" class="logo">
+                            <!-- <img src="./images/Marriott_hotels_logo14.svg.png"> -->
+                    </a>
+                    <div class="navBarRight">
+                            <a href="#amenities">Amenities</a>
+                            <a href="#reviews">Reviews</a>
+                            <a href="food.html">Food Service</a>
+                            <a href="book.html">Book a Room</a>
+                            <a href="https://neisapatterson.github.io/midterm/contact.html">Contact Us</a>
+                            <a href="#explore">Explore</a>
+                    </div>
+            </nav>
+            <div id="header">
+                    <img src="./images/hotel_header.jpg">
+                    <h1 id="taglineText">Choose between our three room options</h1>
+            </div>
+
+                    <h2>Popular Offers</h2>
+            <div class="rooms">
+                    <div id="fulls">
+                    </div>
+                    <div id="king">
+                    </div>  
+                    <div id="family">
+                    </div>  
+            </div> 
+
+            <p class="userInfo"><label>First Name:</label> <input type="text"  name='fname' /></p>
+            <p class="userInfo"><label>Last Name*:</label>  <input type="text"  name='lname' /></p>
+            <p class="userInfo"><label>Phone*:</label> <input type="text"  name='phone' /></p>
+
+            <table border="0" cellpadding="3">
+                <tr>
+                  <th>Select Item</th>
+                  <th>Item Name</th>
+                  <th>Cost Each</th>
+                  <th>Total Cost</th>
+                </tr>
+              <script>
+              
+                var s = "";
+                for (i=0; i< menuItems.length; i++)
+                {
+                    s += "<tr>";
+                    s += td(makeSelect("quan" + i, 0, 10),"selectQuantity");
+                    s += td(menuItems[i].name, "itemName");
+                    s += td("$" +menuItems[i].cost.toFixed(2), "cost");
+                    s += td("$<input type='text' name='cost'/>", "totalCost");
+                    s+= "</tr>";
+                }
+                document.writeln(s);
+              </script>
+            </table>
+            <p class="subtotal totalSection"><label>Subtotal</label>: 
+            $ <input type="text"  name='subtotal' id="subtotal" />
+            </p>
+            <p class="tax totalSection"><label>Florida tax 6.25%:</label>
+            $ <input type="text"  name='tax' id="tax" />
+            </p>
+            <p class="total totalSection"><label>Total:</label> $ <input type="text"  name='total' id="total" />
+            </p>
+
+            <div class="bookButton">
+                    <button class="button5" type="button">BOOK NOW</button>
+            </div>
+
+            <footer>
+            </footer>
+    </body>
+</html>
