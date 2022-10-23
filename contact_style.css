@@ -62,3 +62,18 @@
     z-index: 500;
     transition: background-color 1s ease 0s;
 }
+
+#ctaglineText {
+    position: absolute;
+    top: 75%;
+    left: 70%;
+    font-family: 'Heebo';
+    color: #FFFFFF;
+    transform: translate(-30%, -30%);
+    text-align: center;
+}
+
+#cheader img {
+    height: 85vh;
+    width: 100%;
+}
