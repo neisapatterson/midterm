@@ -1,17 +1,267 @@
 <html>
         <head>
-                <title>Hotel Name</title>
+                <title>Grand Del Mar Resort</title>
                 <link rel="stylesheet" href="styles.css">
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                <script>
+                        function showOnScroll(containerId){
+                                $(containerId).each( function(i){
+                                        let elementBottom = $(this).offset().top + $(this).outerHeight();
+                                        
+                                        let windowBottom = $(window).scrollTop() + $(window).height();
+
+                                        if( windowBottom > elementBottom ){
+                                                $(this).animate({'opacity':'1'},3000);
+                                        }
+                                });                                
+                        }
+
+                        $(document).ready(function(){
+                                $(document).scroll( function(){
+                                        showOnScroll($('.reviewContainer'));
+                                        showOnScroll($('.amenitiesSection'));
+                                        showOnScroll($('.discoverContainer'));
+                         });
+                        });
+
+                        
+                </script>
                 <style>
+                        #header {
+                                max-width: 100%;
+                                margin: 0;
+                        }
+     
+                        #header img {
+                                height: 85vh;
+                                width: 100%;
+                        }
+
+                        #taglineText {
+                                position: absolute;
+                                top: 75%;
+                                left: 70%;
+                                font-family: 'Heebo';
+                                color: #FFFFFF;
+                                transform: translate(-30%, -30%);
+                                text-align: center;
+                        }
+
+                        #buyHome {
+                                border-radius: 25px;
+                                background-image: url("./images/beach.jpg");
+                                background-size: cover;
+                                height: 75vh;
+                                width: 30%;
+                                max-width: 100%;
+                                margin-left: 10px;
+                        }
+
+                        #buyHome:hover {
+                                transform: scale(1.05);
+                        }
+
+                        #sellHome {
+                                border-radius: 25px;
+                                background-image: url("./images/hotel_room.jpg");
+                                background-size: cover;
+                                height: 75vh;
+                                width: 30%;
+                                max-width: 100%;
+                        }
+
+                        #sellHome:hover {
+                                transform: scale(1.05);
+                        }
+
+                        #rentHome {
+                                background-image: url("./images/traveling.jpg");
+                                background-size: cover;
+                                height: 75vh;
+                                width: 30%;
+                                max-width: 100%;
+                                border-radius: 25px;
+                                margin-right: 10px;
+                        }
+
+                        #rentHome:hover {
+                                transform: scale(1.05);
+                        }
+
+                        .homeContainer {
+                                max-width: 100%;
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-between;
+                        }
+
+                        .bookButton {
+                                display: flex;
+                                justify-content: center;
+                                margin: 25px;
+                        }
+
+                        .button5 {
+                                color: black;
+                                border: 2px solid #555555;
+                                border-radius: 5px;
+                                padding: 12px;
+                                justify-content: center;
+                                align-items: center;
+                        }
+                        
+                        .button5:hover {
+                                background-color: #555555;
+                                color: white;
+                        }
+
+                        .reviewContainer {
+                                display: flex;
+                                flex-direction: row;
+                                max-width: 100%;
+                                opacity: 0;
+                                /* background-color: #EEEDE7; */
+                        }
+                        .images {
+                                width: 50%;
+                                max-width: 100%;
+                                padding-bottom: 2vh;
+                                border-radius: 25px;
+                        }
+
+                        #discoverImage {
+                                width: 75%;
+                        }
+
+
+                        .amenitiesSection {
+                                display: flex;
+                                max-width: 100%;
+                                flex-direction: row;
+                                justify-content: space-between;
+                                opacity: 0;
+
+                        }
+
+.reviewSection {
+        display: flex;
+        max-width: 100%;
+        left: 70%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: "Heebo";
+        font-size: 1.5em;
+        text-align: center;
+        padding-left: 30px;
+}
+
+.discoverContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 25px;
+        flex-direction: column;
+        opacity: 0;
+}
+
+
+@media only screen and (max-width: 850px) {
+                                body {
+                                        margin: 0 auto;
+                                }
+                                #header img{
+                                        height: 60vh;
+                                }
+
+                                #taglineText {
+                                        display: none;
+                                }
+                                .homeContainer {
+                                max-width: 100%;
+                                display:block;
+                                }
+
+                                #buyHome {
+                                        background-image: url("./images/beach.jpg");
+                                        background-size: cover;
+                                        width: 100%;
+                                        margin-bottom: 5%;
+                                        max-width: 100%;
+                                        margin-left: 0px;
+                                }
+
+                                #sellHome {
+                                        background-image: url("./images/hotel_room.jpg");
+                                        background-size: cover;
+                                        margin-bottom: 5%;
+                                        width: 100%;
+                                        max-width: 100%;
+                                }
+
+                                #rentHome {
+                                        background-image: url("./images/traveling.jpg");
+                                        background-size: cover;
+                                        margin-bottom: 5%;
+                                        width: 100%;
+                                        max-width: 100%;
+                                }
+
+                                .buttonContainer {
+                                        max-width: 100%;
+                                        border-style: solid; 
+                                        border-color: #000000;
+                                        border-radius: 10%;
+                                        width: 20%;
+                                        margin-top: 120%;
+                                        margin-left: 45%;
+                                        display: flex;
+                                        justify-content: center;
+                                        background-color:rgba(255, 255, 255, 0.5);
+                                }
+
+                                .reviewContainer {
+                                        display: block;
+                                        max-width: 100%;
+                                }
+                                .reviewContainer img {
+                                        width: 100%;
+                                        margin: 0 auto;
+                                }
+                                .reviewSection {
+                                        left: 0%;
+                                        padding-left: 0px;
+                                }
+
+                                .amenitiesSection {
+                                display: block;
+                                width: 100%;
+                                justify-content: center;
+                                margin: 0 auto;
+
+                        }
+                                .servicesText {
+                                        text-align: center;
+                                }
+                                .amenitiesSubSection {
+                                        display: block;
+                                        text-align: center;
+
+                                }
+
+                                .images {
+                                        width:100%;
+                                }
+                        }
+                
                 </style>
 
         </head>
         <body>
                 <nav>
                         <a href="#default" class="logo">
-                                <!-- <img src="./images/Marriott_hotels_logo14.svg.png"> -->
                         </a>
                         <div class="navBarRight">
                                 <a href="#amenities">Amenities</a>
@@ -22,7 +272,7 @@
                         </div>
                 </nav>
                 <div id="header">
-                        <img src="./images/hotel_header.jpg">
+                        <img src="./images/pexels-quark-studio-2507010.jpg">
                         <h1 id="taglineText">When you stay with us, you're at home.</h1>
                 </div>
 
@@ -68,7 +318,7 @@
                 </div>
                 <h2>Amenities</h2>
 
-                <div class="servicesSection">
+                <div class="amenitiesSection">
                         <div class="amenitiesSubSection">
                         <p class="servicesText">Free Buffet and Continental Breakfast</p>
                         <p class="servicesText">3 On-Site Restaurants</p>
@@ -86,7 +336,7 @@
 
                 <div class="discoverContainer">
                         <img class="images" id="discoverImage" src="./images/downtown-san-diego-bay.jpg" alt="downtown-san-diego-bay"/>
-                        <h2>Discover X City!</h2>
+                        <h2>Discover Miami!</h2>
                 </div>
                 <div class="contact"></div>
                 <footer>

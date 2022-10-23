@@ -1,0 +1,261 @@
+<html>
+        <head>
+                <title>Reviews</title>
+                <link rel="stylesheet" href="styles.css">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                <script>
+                        $(document).ready(function(){
+                                $(function(){
+                                        let $slideshow = $('.reviewSlideshow div');
+                                        $slideshow.hide().eq(0).show();
+                                        setInterval(function(){
+                                                $slideshow.filter(':visible').fadeOut(function(){
+                                                let $div = $(this).next('div');
+                                                if ( $div.length == 0 ) {
+                                                        $slideshow.eq(0).fadeIn();
+                                                } else {
+                                                        $div.fadeIn();
+                                                }
+                                                });
+                                        }, 5000);
+                                        });
+                        });
+                </script>
+                <style>
+                        #header {
+                                max-width: 100%;
+                                margin: 0;
+                        }
+     
+                        #header img {
+                                height: 85vh;
+                                width: 100%;
+                        }
+
+                        #taglineText {
+                                position: absolute;
+                                top: 75%;
+                                left: 70%;
+                                font-family: 'Heebo';
+                                color: #FFFFFF;
+                                transform: translate(-30%, -30%);
+                                text-align: center;
+                        }
+                        * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  margin: 0 auto;
+}
+
+.reviewSlideshow {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+}
+
+.heading {
+  font-size: 25px;
+  margin-right: 25px;
+  max-width: 800px;
+}
+
+.fa {
+  font-size: 25px;
+  max-width: 800px;
+}
+
+.checked {
+  color: #1768eb;
+  max-width: 800px;
+}
+
+.images {
+        width: 33%;
+        max-width: 100%;
+        padding-bottom: 2vh;
+        border-radius: 25px;
+        margin-top: 10px;
+        margin-top: 10px;
+
+}
+@media only screen and (max-width: 850px) {
+                                body {
+                                        margin: 0 auto;
+                                }
+                                #header img{
+                                        height: 60vh;
+                                }
+
+                                #taglineText {
+                                        display: none;
+                                }
+                                .homeContainer {
+                                max-width: 100%;
+                                display:block;
+                                }
+
+                                #buyHome {
+                                        background-image: url("./images/beach.jpg");
+                                        background-size: cover;
+                                        width: 100%;
+                                        margin-bottom: 5%;
+                                        max-width: 100%;
+                                        margin-left: 0px;
+                                }
+
+                                #sellHome {
+                                        background-image: url("./images/hotel_room.jpg");
+                                        background-size: cover;
+                                        margin-bottom: 5%;
+                                        width: 100%;
+                                        max-width: 100%;
+                                }
+
+                                #rentHome {
+                                        background-image: url("./images/traveling.jpg");
+                                        background-size: cover;
+                                        margin-bottom: 5%;
+                                        width: 100%;
+                                        max-width: 100%;
+                                }
+
+                                .buttonContainer {
+                                        max-width: 100%;
+                                        border-style: solid; 
+                                        border-color: #000000;
+                                        border-radius: 10%;
+                                        width: 20%;
+                                        margin-top: 120%;
+                                        margin-left: 45%;
+                                        display: flex;
+                                        justify-content: center;
+                                        background-color:rgba(255, 255, 255, 0.5);
+                                }
+
+                                .reviewContainer {
+                                        display: block;
+                                        max-width: 100%;
+                                }
+                                .reviewContainer img {
+                                        width: 100%;
+                                        margin: 0 auto;
+                                }
+                                .reviewSection {
+                                        left: 0%;
+                                        padding-left: 0px;
+                                }
+
+                                .amenitiesSection {
+                                display: block;
+                                width: 100%;
+                                justify-content: center;
+                                margin: 0 auto;
+
+                        }
+                                .servicesText {
+                                        text-align: center;
+                                }
+                                .amenitiesSubSection {
+                                        display: block;
+                                        text-align: center;
+
+                                }
+
+                                .images {
+                                        width:100%;
+                                }
+                        }
+                </style>
+
+        </head>
+        <body>
+                <nav>
+                        <a href="#default" class="logo">
+                        </a>
+                        <div class="navBarRight">
+                                <a href="#amenities">Amenities</a>
+                                <a href="#reviews">Reviews</a>
+                                <a href="#food">Food Service</a>
+                                <a href="#book">Book a Room</a>
+                                <a href="#explore">Explore</a>
+                        </div>
+                </nav>
+                <div id="header">
+                        <img src="./images/pexels-donald-tong-189296.jpg">
+                        <h1 id="taglineText">When you stay with us, you're at home.</h1>
+                </div>
+
+                <div class="reviewSlideshow">
+                        <div>
+                                <span class="heading">Shaunice M</span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <h2>Excellent accommodations in Downtown Miami</h2>
+                                <p>Mr Pickett displayed exemplary customer service to everyone I saw interact with him. He was polite, helpful and a very good example of what it means to provide fine hospitality. Highly Recommend Grand Del Mar!</p>
+                                <hr style="border:3px solid #f1f1f1">
+                        </div>
+
+                        <div>
+                                <span class="heading">Mia J</span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <h2>Honeymoon in Miami</h2>
+                                <p>We had the best time and service at Grand Del Mar Hotel when we were in Miami for our honeymoon. We got a lovely room and the staff were super friendly. All we want to do is to go back, asap! This hotel has that “little extra” and gives you a five star experience. Beautiful pools, rooms, lobby, and spa. We liked that it was in a quiet area and you can easily take an Uber to South beach/down town. Thank you for everything!</p>
+                                <hr style="border:3px solid #f1f1f1">
+                        </div>
+                <div>
+                        <span class="heading">Hugo K</span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <h2>Buena Habitación</h2>
+                        <p>Everything is perfect, is it amazing to be here, the personel helps, and be very worries for all, for a good, specially Sekene, Kai & Héctor. I have a complimentary upgrade to a just with a good view, thank you guys!</p>
+                        <hr style="border:3px solid #f1f1f1"> 
+                </div>
+                <div>
+                        <span class="heading">Emily O</span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <h2>Wonderful hospitality at Grand Del Mar</h2>
+                        <p>I had the most excellent staff experience at this beautiful hotel. The catering staff at our conference and the people working at the pool and beach and front desk and restaurant made me feel at home. Shout out to Jon-Paul, Kevin, and Santiago as some of many who showed great hospitality. Mil Gracias!</p>
+                        <hr style="border:3px solid #f1f1f1"> 
+                </div>
+                <div>
+                        <span class="heading">Marlene C</span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <h2>Amazing Mami Beach Hotel Experience With Spectacular Costumer Service</h2>
+                        <p>From the moment we arrived at the Valet parking and throughout our spectacular stay we experienced the most amazing mini Vacation at Nobu Hotel Miami.. Pool was beautiful and peaceful as well as the staff catering to your needs.. Three weeks ago we had a terrible experience at the Fountainebleau Hotel where we were incredibly disappointed with the very poor costumer service.. We are very happy we found this hotel and expect to return very soon… Also on Fridays and Saturdays they offer guests a Kanpai Hour Exclusive where they have complimentary wine and champagne with some appetizers to enjoy while socializing.. Alejandro and Paulo ensured each guest received first class service.. I Totally love this hotel and the facilities. Will definitely be back.</p>
+                        <hr style="border:3px solid #f1f1f1"> 
+                </div>
+                </div>
+                <div class="awards">
+                        <img class="images" src="./images/2020-Hotel-Awards-Winner-logo.jpg">
+                        <img class="images" src="./images/BestHotelAwardsLogo.png">
+                        <img class="images" src="./images/hospitality.png">
+
+                </div>
+                
+                <footer>
+                </footer>
+        </body>
+</html>
