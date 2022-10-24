@@ -32,15 +32,15 @@
                 $(".slideP").text(carouselP[curr_img / 3]);
 
                 $(".slide0").fadeOut(600, function() {
-                        $(".slide0").attr("src", "amenitiesMedia/" + carousel[curr_img]);
+                        $(".slide0").attr("src", "./amenitiesMedia/" + carousel[curr_img]);
                         $(".slide0").fadeIn(600);
                 });
                 $(".slide1").fadeOut(600, function() {
-                        $(".slide1").attr("src", "amenitiesMedia/" + carousel[curr_img + 1]);
+                        $(".slide1").attr("src", "./amenitiesMedia/" + carousel[curr_img + 1]);
                         $(".slide1").fadeIn(600);
                 });
                 $(".slide2").fadeOut(600, function() {
-                        $(".slide2").attr("src", "amenitiesMedia/" + carousel[curr_img + 2]);
+                        $(".slide2").attr("src", "./amenitiesMedia/" + carousel[curr_img + 2]);
                         $(".slide2").fadeIn(600);
                 });
         }
