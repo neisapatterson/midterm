@@ -29,8 +29,7 @@ body {
 }
 
 .mus {
-    text-align: left;
-    float: left;
+    display:inline-block;
 }
 
 .mus h1{
@@ -38,12 +37,18 @@ body {
 }
 
 .mus img{
-    width: 100%;
-    height: auto;
+    width: 600px;
+    height: 400px;
+    padding-right: 25px;
+    float: left;
 }
 
 .mus p{
+    margin-top: 4cm;
+    margin-left:4cm;
+    margin-bottom: 2cm;
     text-align: left;
+    font-size: 20px;
 }
 
 .oneact {
@@ -52,3 +57,9 @@ body {
     margin-left: 1cm;
     padding-left: 50px;
 }
+
+.oneact img{
+    width: 600px;
+    height: 400px;
+}
+
