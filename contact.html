@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="contact_style.css">
         <link rel="stylesheet" href="amenities_style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="amenities_script.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="logo.ico" rel="icon" type="image/x-icon"/>
         <style>
@@ -69,7 +70,7 @@
                 </div>
                 <input type="checkbox" class="termsConditions" value="Term">
                 <label style="color: grey" for="terms"> I Accept the <span style="color: #0e3721">Terms of Use</span> & <span style="color: #0e3721">Privacy Policy</span>.</label><br>
-                <button class="submit" onClick="">Submit</button>
+                <button class="submit" onClick="formSubmit()">Submit</button>
             </form>
             </div>
             <div class="mapCon">
@@ -94,6 +95,7 @@
                     <img src="./images/ig.png">
                 </div>
             </div>
+            <br><br><br>
             <div class="footer">
                 <ul class="footLinks_contact">
                         <li><i class="fa-solid fa-copyright"></i></i> 2022 Grand Del Mar Suites and Resort</li>
@@ -109,5 +111,10 @@
                         <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
+            <script>
+                function formSubmit(){
+                    alert("Thank you! You will receive a response in 1-2 business days.");
+                }
+            </script>
     </body>
 </html>
