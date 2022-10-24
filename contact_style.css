@@ -131,30 +131,54 @@ nav a.currentPage {
     padding: 35px;
     border-radius: 30px;
     margin: 1cm auto 4cm;
+    height: 18cm;
     width: 700px;
     box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
    
 }
 
 .form-item {
-    display: block;
-    font-size: 16px;
-    font-size: 1rem;
-    margin-bottom: 5px;
+    text-align: center;
+    padding: 10px;
+    border: none;
+    transition: all 0.5s ease 0s;
 }
 
-.form-item:hover{
-    border-bottom: 5px solid #0e3721;
-    height: 12em;
+.form-item input, .form-item select, .form-item textarea{
+    height: 3em;
+    border-radius:10px;
     width: 380px;
+    font-size:20px;
+    color: #a9a9a9;
+}
+
+.form-item input:hover, .form-item select:hover, .form-item textarea:hover{
+    height: 4em;
+    width: 380px;
+    border-bottom: 5px solid #AFEEEE;
     transition: ease 0.5s;
 }
+
+.submit {
+    background-color: #AFEEEE;
+    width: 200px;
+    height: 80px;
+    margin-top: .5cm;
+}
+
+.submit:hover {
+    box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);
+    transform: translateY(-3px);
+    width: 300px;
+    border-top: 5px solid #0e3750;
+    border-radius: 0%;
+  }
 
 .termsConditions{
     margin: 0 auto 5px 80px;
   }
 
-.mapTitle{
+.mapCon{
     text-align: center;
 }
 
@@ -168,4 +192,11 @@ nav a.currentPage {
 .mapTitle p {
     font-size: 15px;
     margin-bottom: 1cm;
+}
+
+.social{
+    text-align: center;
+}
+.icons {
+    margin: 0 25px;
 }
