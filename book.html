@@ -14,122 +14,6 @@
             <style >
             </style>
 
-            <script>
-                function MenuItem(name, cost)
-                {
-                this.name = name;
-                this.cost=cost;
-                }
-
-                menuItems = new Array(
-                new MenuItem("Full size beds", 225),
-                new MenuItem("King size bed", 340),
-                new MenuItem("Family Suite", 500),
-                );
-
-                prices = [225, 230, 350];
-                quantotal = [0, 0, 0];
-                quanCount = [0, 0, 0];
-                orderInfo = [0, 0, 0]; 
-                itemInfo = [];
-                isPickup = true;
-                subtotal = 0;
-                total = 0; 
-                tax = 0;
-
-                function updateDollars() 
-                {
-                    subtotal = 0;
-                    for (i = 0; i < menuItems.length; i++) {
-                    size = document.getElementsByName("quan" + i)[0].value;
-                    if (parseInt(size) != 0) {
-                    costs = (parseInt(size) * menuItems[i].cost).toFixed(2);
-                    document.getElementsByName("cost")[i].value = costs;
-                    subtotal += parseFloat(costs);
-                    }
-                    }
-
-                    subtotal = subtotal;
-                    tax = (subtotal * 0.0600);
-                    total = subtotal + tax;
-                    document.getElementById("subtotal").value = subtotal.toFixed(2);
-                    document.getElementById("tax").value = tax.toFixed(2);
-                    document.getElementById("total").value = total.toFixed(2);
-                }
-
-                // when submit is clicked, get timeEstimate and order is being placed
-                $("input[type='button']").click(function() {
-                    if (isValidForm()) {
-                        alert("Thank you for your order! A text will be sent shortly")
-                    }
-                });
-
-                // initializes prices and hides delivery specific inputs
-                function initialize() {
-                $("input[name='cost']").val(0);
-                $("#subtotal").val(0);
-                $("#tax").val(0);
-                $("#total").val(0);
-                $(".userInfo.address").hide();
-                }
-
-                // once order is placed validate order
-                function isValidForm() {
-                // requirements for both pickup and delivery
-            
-                if (!isValidPhone($("input[name='phone']").val())) {
-                    return printError("a valid phone number of 7 or 10 digits", "phone");
-                } else if (total == 0) {
-                    errorTotal.show();
-                    $("select").eq(0).focus();
-                    $(".errorTotal").text("*Please add at least one item to your cart"); 
-                    return false;
-                }
-
-                // remove error message
-                errorTag.hide();
-                errorTotal.hide();
-                return true; 
-                }
-
-                // print error message passed in and focus box
-                function printError(message, tag) {
-                errorTag.show();
-                $("input[name='" + tag + "']").focus();
-                $(".error").text("*Please enter " + message);
-                return false;
-                }
-                // sum all the digits (ignoring other chars) of the phone number
-                // make sure it equals 7 or 10
-                function isValidPhone(phone) {
-                digits = 0;
-                for (i = 0; i < phone.length; i++) {
-                if ($.isNumeric(phone[i])) { digits++;};
-                }
-                return ((digits == 7) || (digits == 10));
-                }
-
-
-                menu = ["Two full size beds", "One king size bed", 
-                "Family Suite"];
-
-
-                function makeSelect(name, minRange, maxRange)
-                {
-                var t= "";
-                t = "<select name='" + name + "' size='1' onchange='updateDollars()'>";
-                for (j=minRange; j<=maxRange; j++)
-                t += "<option>" + j + "</option>";
-                t+= "</select>"; 
-                return t;
-                }
-
-                function td(content, className="")
-                {
-                return "<td class = '" + className + "'>" + content + "</td>";
-                }
-            </script>
-
 </head>
         <body>
                 <a href="index.html">
@@ -254,5 +138,118 @@
                         <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
+                    <script src="https://code.jquery.com/jquery-3.6.1.js" 
+            integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+            crossorigin="anonymous">
+            <script>
+                function MenuItem(name, cost)
+                {
+                this.name = name;
+                this.cost=cost;
+                }
+
+                menuItems = new Array(
+                new MenuItem("Full size beds", 225),
+                new MenuItem("King size bed", 340),
+                new MenuItem("Family Suite", 500),
+                );
+
+                prices = [225, 230, 350];
+                quantotal = [0, 0, 0];
+                quanCount = [0, 0, 0];
+                orderInfo = [0, 0, 0]; 
+                itemInfo = [];
+                subtotal = 0;
+                total = 0; 
+                tax = 0;
+
+                function updateDollars() 
+                {
+                    subtotal = 0;
+                    for (i = 0; i < menuItems.length; i++) {
+                        size = document.getElementsByName("quan" + i)[0].value;
+                        costs = (parseInt(size) * menuItems[i].cost).toFixed(2);
+                        document.getElementsByName("cost")[i].value = costs;
+                        subtotal += parseFloat(costs);
+                    }
+
+                    subtotal = subtotal;
+                    tax = (subtotal * 0.0600);
+                    total = subtotal + tax;
+                    document.getElementById("subtotal").value = subtotal.toFixed(2);
+                    document.getElementById("tax").value = tax.toFixed(2);
+                    document.getElementById("total").value = total.toFixed(2);
+                }
+
+                $("input[type='button']").click(function() {
+                    if (isValidForm()) {
+                        alert("Thank you for your order! A text will be sent shortly")
+                    }
+                });
+
+                // initializes prices and hides delivery specific inputs
+                function initialize() {
+                $("input[name='cost']").val(0);
+                $("#subtotal").val(0);
+                $("#tax").val(0);
+                $("#total").val(0);
+                $(".userInfo.address").hide();
+                }
+
+                // once order is placed validate order
+                function isValidForm() {
+                if (!isValidPhone($("input[name='phone']").val())) {
+                    return printError("a valid phone number of 7 or 10 digits", "phone");
+                } else if (total == 0) {
+                    errorTotal.show();
+                    $("select").eq(0).focus();
+                    $(".errorTotal").text("*Please add at least one item to your cart"); 
+                    return false;
+                }
+
+//                 // remove error message
+//                 errorTag.hide();
+//                 errorTotal.hide();
+//                 return true; 
+//                 }
+
+                // print error message passed in and focus box
+                function printError(message, tag) {
+                errorTag.show();
+                $("input[name='" + tag + "']").focus();
+                $(".error").text("*Please enter " + message);
+                return false;
+                }
+                // sum all the digits (ignoring other chars) of the phone number
+                // make sure it equals 7 or 10
+                function isValidPhone(phone) {
+                digits = 0;
+                for (i = 0; i < phone.length; i++) {
+                if ($.isNumeric(phone[i])) { digits++;};
+                }
+                return ((digits == 7) || (digits == 10));
+                }
+
+
+                menu = ["Two full size beds", "One king size bed", 
+                "Family Suite"];
+
+
+                function makeSelect(name, minRange, maxRange)
+                {
+                var t= "";
+                t = "<select name='" + name + "' size='1' onchange='updateDollars()'>";
+                for (j=minRange; j<=maxRange; j++)
+                t += "<option>" + j + "</option>";
+                t+= "</select>"; 
+                return t;
+                }
+
+                function td(content, className="")
+                {
+                return "<td class = '" + className + "'>" + content + "</td>";
+                }
+            </script>
+    
     </body>
 </html>
