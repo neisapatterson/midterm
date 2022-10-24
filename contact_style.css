@@ -140,13 +140,13 @@ nav a.currentPage {
 .form-item {
     text-align: center;
     padding: 10px;
-    border: none;
     transition: all 0.5s ease 0s;
 }
 
 .form-item input, .form-item select, .form-item textarea{
     height: 3em;
     border-radius:10px;
+    border-color: #a9a9a9;
     width: 380px;
     font-size:20px;
     color: #a9a9a9;
@@ -161,6 +161,8 @@ nav a.currentPage {
 
 .submit {
     background-color: #AFEEEE;
+    border-radius:10px;
+    border-color: #a9a9a9;
     width: 200px;
     height: 80px;
     margin-top: .5cm;
