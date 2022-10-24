@@ -1,72 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap');
-nav {
-        border-bottom-style: solid;
-        border-bottom-width: 1px;
-        display: flex;
-        flex-direction: row;
-        max-width: 100%;
- }
- #navLogo {
-        max-width: 100%;
-        width: 20vw;
-        padding-top: 0px;
+.logo {
+        position: absolute;
+        border-radius: 25px;
+        width: 6%;
+        margin-top: 20px;
+        margin-left: 30px;
+        cursor: pointer;
+        z-index: 900;
 }
-.navBarSection {
-        border-top-width: 100px;
-        max-width: 100%;
-        width: 33%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+/* nav bar */
+
+.navBar{
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: right;
+        width: 100vw;
+        padding: 1% 3%;
+        justify-content: space-between;
+        align-items: center; 
 }
-.navBarText {
-        display: flex;
-        justify-content: right;
-        font-family: "Gafata";
-        font-size: 2.5em;
-} 
-nav {
-        overflow: hidden;
-        /* background-color: #f1f1f1; */
-        padding: 20px 10px;
-      }
-      
-      /* Style the header links */
-      nav a {
-        float: left;
-        color: black;
-        text-align: center;
-        padding: 12px;
+    
+.navLinks {
+        flex: 1;
+        text-align: right;
+}
+    
+.navLinks li {
+        list-style: none;
+        display: inline-block;
+        padding: 8px 12px;
+        position: relative;
+}
+    
+.navLinks a {
+        color: white;
         text-decoration: none;
-        font-family: 'Heebo';
-        font-size: 18px;
-        line-height: 25px;
-        border-radius: 4px;
-      }
-      
-      /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
-      .logo {
-        max-width: 10%;
-        width: 2vw;
-        height: 1vh;
-      }
-      
-      /* Change the background color on mouse-over */
-      nav a:hover {
-        color: rgba(0,0,0,0.5);
-      }
-      
-      /* Style the active/current link*/
-      nav a.currentPage {
-        background-color: dodgerblue;
-        color: #FFFFFF;
-      }
-      
-      /* Float the link section to the right */
-      .navBarRight {
-        float: right;
-      }
+        font-size: 15px;
+}
+    
+.navLinks li::after {
+        content: '';
+        width: 0%;
+        height: 2px;
+        background-color: white;
+        display: block;
+        margin: auto;
+        transition: 0.5s;
+}
+    
+.navLinks li:hover::after {
+        width: 100%;
+}
+
 
 /* divider */
 
