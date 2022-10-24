@@ -97,7 +97,7 @@ nav a.currentPage {
 }
 
 .cheader img {
-    height: 121vh;
+    height: 120vh;
     width: 100%;
 }
 
@@ -125,13 +125,12 @@ nav a.currentPage {
     margin-left: auto;
 }
 
-
 .form-submission {
     background-color:#d9cb9d;
     border-top: 5px solid #9b8000;
     padding: 35px;
     border-radius: 30px;
-    margin: 1cm auto 8cm;
+    margin: 1cm auto 4cm;
     width: 700px;
     box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
    
@@ -144,3 +143,29 @@ nav a.currentPage {
     margin-bottom: 5px;
 }
 
+.form-item:hover{
+    border-bottom: 5px solid #0e3721;
+    height: 12em;
+    width: 380px;
+    transition: ease 0.5s;
+}
+
+.termsConditions{
+    margin: 0 auto 5px 80px;
+  }
+
+.mapTitle{
+    text-align: center;
+}
+
+.mapTitle h1 {
+    font-size: 50px;
+    text-decoration: underline #d9cb9d;
+    text-decoration-thickness: 0.08em;
+    margin-bottom: 1cm;
+}
+
+.mapTitle p {
+    font-size: 15px;
+    margin-bottom: 1cm;
+}
