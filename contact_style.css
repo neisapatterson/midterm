@@ -24,6 +24,16 @@
     align-items: center; 
 }
 
+/* Change the background color on mouse-over */
+nav a:hover {
+    color: rgba(0,0,0,0.5);
+  }
+
+nav a.currentPage {
+    background-color: dodgerblue;
+    color: #FFFFFF;
+}
+
 .navLinks {
     flex: 1;
     text-align: right;
@@ -61,6 +71,15 @@
     background-color: paleturquoise;
     z-index: 500;
     transition: background-color 1s ease 0s;
+}
+
+.title {
+    width: 50%;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    color: white;
+    text-align: center;
 }
 
 #ctaglineText {
@@ -116,5 +135,4 @@
     font-size: 1rem;
     margin-bottom: 5px;
 }
-
 
