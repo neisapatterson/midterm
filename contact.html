@@ -68,9 +68,9 @@
                 <div class="form-item">
                         <textarea id="subject" name="subject" placeholder="Comments / Special Requests " style="height:200px"></textarea>
                 </div>
-                <input type="checkbox" class="termsConditions" value="Term">
+                <input type="checkbox" id="termsConditions" value="Term">
                 <label style="color: grey" for="terms"> I Accept the <span style="color: #0e3721">Terms of Use</span> & <span style="color: #0e3721">Privacy Policy</span>.</label><br>
-                <button class="submit" onClick="validateForm()">Submit</button>
+                <button id="submit" onClick="validateForm()">Submit</button>
             </form>
             </div>
             <div class="mapCon">
@@ -112,29 +112,32 @@
                 </ul>
             </div>
             <script>
+                var submit = document.getElementById("submit");
+                var checkbox = document.getElementById("termsConditions");
+
                 function formSubmit(){
                     alert("Thank you! You will receive a response in 1-2 business days.");
+                    window.location = 'https://neisapatterson.github.io/midterm/contact.html';
                 }
-                function validateForm() {
-                    let fname = document.getElementsById("fname").value;
-                    let lname = document.getElementsById("lname").value;
-                    let email = document.getElementsById("email").value;
-                    let checkbox = document.getElementsByName("checkbox");
-                    if (fname == "") {
-                        alert("First name must be filled out");
-                        return false;
-                    }
-                    if (lname == "") {
-                        alert("Last name must be filled out");
-                        return false;
-                    }
-                    if (email == "") {
-                        alert("Email must be filled out");
-                        return false;
-                    }
-                    if (!checkbox[0].checked){
-                        alert("Please check the terms of use & private policy.");
-                    }
-                    formSubmit();
+                submit.onclick = function validateForm() {
+                        if (fname.value == "") {
+                            alert("First name must be filled out");
+                            return false;
+                        }
+                        if (lname.value == "") {
+                            alert("Last name must be filled out");
+                            return false;
+                        }
+                        if (email.value == "") {
+                            alert("Email must be filled out");
+                            return false;
+                        }
+                        if (!checkbox.checked){
+                            alert("Please check the terms of use & private policy.");
+                            return false;
+                        }
+                        formSubmit();
                 }
             </script>
+    </body>
+</html>
