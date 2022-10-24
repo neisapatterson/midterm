@@ -1,0 +1,197 @@
+.logo {
+        position: absolute;
+        border-radius: 25px;
+        width: 6%;
+        margin-top: 20px;
+        margin-left: 30px;
+        cursor: pointer;
+        z-index: 900;
+}
+/* nav bar */
+
+.navBar{
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: right;
+        width: 100vw;
+        padding: 1% 3%;
+        justify-content: space-between;
+        align-items: center; 
+}
+    
+.navLinks {
+        flex: 1;
+        text-align: right;
+}
+    
+.navLinks li {
+        list-style: none;
+        display: inline-block;
+        padding: 8px 12px;
+        position: relative;
+}
+    
+.navLinks a {
+        color: white;
+        text-decoration: none;
+        font-size: 15px;
+}
+    
+.navLinks li::after {
+        content: '';
+        width: 0%;
+        height: 2px;
+        background-color: white;
+        display: block;
+        margin: auto;
+        transition: 0.5s;
+}
+    
+.navLinks li:hover::after {
+        width: 100%;
+}
+
+/* when scrolling */
+.showNav {
+        background-color: paleturquoise;
+        z-index: 500;
+        transition: background-color 1s ease 0s;
+}
+
+/* header */
+.title {
+        width: 50%;
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        color: white;
+        text-align: center;
+}
+
+
+.title h1 {
+        font-size: 120px;  
+}
+
+.header {
+        position: relative;
+}
+
+/* divider */
+
+#header {
+        max-width: 100%;
+        /* top: 10px;
+        position: relative; */
+    }
+     
+#header img {
+        height: 85vh;
+        width: 100%;
+        /* margin: none;
+        padding: none; */
+    }
+
+#taglineText {
+        position: absolute;
+        top: 75%;
+        left: 70%;
+        font-family: 'Heebo';
+        color: #FFFFFF;
+        transform: translate(-30%, -30%);
+        text-align: center;
+    }
+
+    #fulls {
+        border-radius: 25px;
+        background-image: url("fulls.jpg");
+        background-size: cover;
+        height: 75vh;
+        width: 30%;
+        max-width: 100%;
+        margin-left: 10px;
+}
+
+#fulls:hover {
+        transform: scale(1.05);
+}
+
+#king {
+        border-radius: 25px;
+        background-image: url("king.jpg");
+        background-size: cover;
+        height: 75vh;
+        width: 30%;
+        max-width: 100%;
+}
+
+#king:hover {
+        transform: scale(1.05);
+}
+
+#family {
+        background-image: url("family.jpg");
+        background-size: cover;
+        height: 75vh;
+        width: 30%;
+        max-width: 100%;
+        border-radius: 25px;
+        margin-right: 10px;
+}
+
+#family:hover {
+        transform: scale(1.05);
+}
+.rooms {
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+}
+
+#fulld {
+        border-radius: 25px;
+        margin-right: 100px;
+        margin-left: 100px
+}
+
+#kingd {
+        border-radius: 25px;
+        margin-right: 80px;
+        margin-left: 100px;
+}
+
+#familyd {
+        border-radius: 25px;
+        margin-right: 60px;
+        margin-left: 100px;
+}
+
+.roomdescription {
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+}
+
+.bookButton {
+        display: flex;
+        justify-content: center;
+        margin: 25px;
+}
+
+.reviewContainer {
+        display: flex;
+        flex-direction: row;
+        max-width: 100%;
+        /* background-color: #EEEDE7; */
+}
+.images {
+        width: 50%;
+        max-width: 100%;
+        padding-bottom: 2vh;
+        border-radius: 25px;
+}

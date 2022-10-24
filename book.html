@@ -1,0 +1,246 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Grand Del Mar Suites and Resort located in Miami, Florida">
+        <meta name="keywords" content="Hotel, Beach, Miami, Amenities, Suites, Resort">
+        <title>Grand Del Mar - Book A Room</title>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script src="https://kit.fontawesome.com/55d0223fcd.js" crossorigin="anonymous"></script>
+            <link href="logo.ico" rel="icon" type="image/x-icon"/>
+            <style >
+            </style>
+
+            <script>
+                function MenuItem(name, cost)
+                {
+                this.name = name;
+                this.cost=cost;
+                }
+
+                menuItems = new Array(
+                new MenuItem("Full size beds", 225),
+                new MenuItem("King size bed", 340),
+                new MenuItem("Family Suite", 500),
+                );
+
+                prices = [225, 230, 350];
+                quantotal = [0, 0, 0];
+                quanCount = [0, 0, 0];
+                orderInfo = [0, 0, 0]; 
+                itemInfo = [];
+                isPickup = true;
+                subtotal = 0;
+                total = 0; 
+                tax = 0;
+
+                function updateDollars() 
+                {
+                    subtotal = 0;
+                    for (i = 0; i < menuItems.length; i++) {
+                    size = document.getElementsByName("quan" + i)[0].value;
+                    if (parseInt(size) != 0) {
+                    costs = (parseInt(size) * menuItems[i].cost).toFixed(2);
+                    document.getElementsByName("cost")[i].value = costs;
+                    subtotal += parseFloat(costs);
+                    }
+                    }
+
+                    subtotal = subtotal;
+                    tax = (subtotal * 0.0600);
+                    total = subtotal + tax;
+                    document.getElementById("subtotal").value = subtotal.toFixed(2);
+                    document.getElementById("tax").value = tax.toFixed(2);
+                    document.getElementById("total").value = total.toFixed(2);
+                }
+
+                // when submit is clicked, get timeEstimate and order is being placed
+                $("input[type='button']").click(function() {
+                    if (isValidForm()) {
+                        alert("Thank you for your order! A text will be sent shortly")
+                    }
+                });
+
+                // initializes prices and hides delivery specific inputs
+                function initialize() {
+                $("input[name='cost']").val(0);
+                $("#subtotal").val(0);
+                $("#tax").val(0);
+                $("#total").val(0);
+                $(".userInfo.address").hide();
+                }
+
+                // once order is placed validate order
+                function isValidForm() {
+                // requirements for both pickup and delivery
+            
+                if (!isValidPhone($("input[name='phone']").val())) {
+                    return printError("a valid phone number of 7 or 10 digits", "phone");
+                } else if (total == 0) {
+                    errorTotal.show();
+                    $("select").eq(0).focus();
+                    $(".errorTotal").text("*Please add at least one item to your cart"); 
+                    return false;
+                }
+
+                // remove error message
+                errorTag.hide();
+                errorTotal.hide();
+                return true; 
+                }
+
+                // print error message passed in and focus box
+                function printError(message, tag) {
+                errorTag.show();
+                $("input[name='" + tag + "']").focus();
+                $(".error").text("*Please enter " + message);
+                return false;
+                }
+                // sum all the digits (ignoring other chars) of the phone number
+                // make sure it equals 7 or 10
+                function isValidPhone(phone) {
+                digits = 0;
+                for (i = 0; i < phone.length; i++) {
+                if ($.isNumeric(phone[i])) { digits++;};
+                }
+                return ((digits == 7) || (digits == 10));
+                }
+
+
+                menu = ["Two full size beds", "One king size bed", 
+                "Family Suite"];
+
+
+                function makeSelect(name, minRange, maxRange)
+                {
+                var t= "";
+                t = "<select name='" + name + "' size='1' onchange='updateDollars()'>";
+                for (j=minRange; j<=maxRange; j++)
+                t += "<option>" + j + "</option>";
+                t+= "</select>"; 
+                return t;
+                }
+
+                function td(content, className="")
+                {
+                return "<td class = '" + className + "'>" + content + "</td>";
+                }
+            </script>
+
+</head>
+        <body>
+                <a href="index.html">
+                <img class="logo" src="logo.png" alt="">
+                </a>
+                <div id="headVid">
+                <img id="header" src="./images/pexels-quark-studio-2507010.jpg" />
+                </div>
+                <div class="header">
+                <div class="navBar">
+                <ul class="navLinks">
+                <li><a href="amenities.html">Amenities</a></li>
+                <li><a href="book.html">Book</a></li>
+                <li><a href="food.html">Food</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                </ul>
+        </div>
+        </div>
+        <div class="title">
+                <h1>Grand Del Mar</h1>
+                <p>Choose between our three room options</p>
+        </div>
+
+            <div id="text">
+                    <img src="./images/hotel_header.jpg">
+                    <h1 id="taglineText"></h1>
+            </div>
+
+                    <h2>Room Offers</h2>
+            <div class="rooms">
+                    <div id="fulls">
+                    </div>
+                    <div id="king">
+                    </div>  
+                    <div id="family">
+                    </div>  
+            </div> 
+
+            <br> <br>
+            <div class="roomdescription">
+                <div id="fulld">
+                        This dual bed luxury room houses two memory foam full
+                        size beds. These rooms are about 400 square feet, comes 
+                        with complimentary breakfast and food to door service 
+                        (for charge, not included in pricing). TV, pull-out 
+                        couch and love seat also included in the room.
+                </div>
+
+                <div id="kingd">
+                        This giant bed luxury room houses one cloud foam king
+                        size bed. These rooms are about 450 square feet, comes 
+                        with complimentary breakfast and food to door service 
+                        (for charge, not included in pricing). TV, pull-out 
+                        couch and love seat also included in the room.
+                </div>
+
+                <div id="familyd">
+                        This family luxury room houses two memory foam full
+                        size beds and one twin size cloud foam bunk bed set.
+                        These rooms are about 650 square feet, comes 
+                        with complimentary breakfast and food to door service 
+                        (included in pricing). TV, pull-out couch, love seat, 
+                        and a play corner with toys for the kids 
+                        also included in the room. Full equipped kitchen also 
+                        included in this package
+                </div>
+            </div>
+
+            <br><br>
+
+            <p class="userInfo"><label>First Name:</label> <input type="text"  name='fname' /></p>
+            <p class="userInfo"><label>Last Name*:</label>  <input type="text"  name='lname' /></p>
+            <p class="userInfo"><label>Phone*:</label> <input type="text"  name='phone' /></p>
+
+            <table border="0" cellpadding="3">
+                <tr>
+                  <th>Nights</th>
+                  <th>Room Type</th>
+                  <th>Cost</th>
+                  <th>Total Cost</th>
+                </tr>
+              <script>
+              
+                var s = "";
+                for (i=0; i< menuItems.length; i++)
+                {
+                    s += "<tr>";
+                    s += td(makeSelect("quan" + i, 0, 10),"selectQuantity");
+                    s += td(menuItems[i].name, "itemName");
+                    s += td("$" +menuItems[i].cost.toFixed(2), "cost");
+                    s += td("$<input type='text' name='cost'/>", "totalCost");
+                    s+= "</tr>";
+                }
+                document.writeln(s);
+              </script>
+            </table>
+            <p class="subtotal totalSection"><label>Subtotal</label>: 
+            $ <input type="text"  name='subtotal' id="subtotal" />
+            </p>
+            <p class="tax totalSection"><label>Florida tax 6.00%:</label>
+            $ <input type="text"  name='tax' id="tax" />
+            </p>
+            <p class="total totalSection"><label>Total:</label> $ <input type="text"  name='total' id="total" />
+            </p>
+
+            <div class="bookButton">
+                    <button class="button5" type="button">BOOK NOW</button>
+            </div>
+
+            <footer>
+            </footer>
+    </body>
+</html>
