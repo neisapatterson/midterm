@@ -1,10 +1,12 @@
 <html>
         <head>
                 <title>Grand Del Mar Resort</title>
-                <link rel="stylesheet" href="styles.css">
+                <!-- <link rel="stylesheet" href="styles.css"> -->
+                <link rel="stylesheet" href="amenities_style.css">
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                <script src="amenities_script.js"></script>
                 <script>
                         function showOnScroll(containerId){
                                 $(containerId).each( function(i){
@@ -29,6 +31,9 @@
                         
                 </script>
                 <style>
+                        h2 {
+                                font-size: 50px;
+                        }
                         #header {
                                 max-width: 100%;
                                 margin: 0;
@@ -43,7 +48,6 @@
                                 position: absolute;
                                 top: 75%;
                                 left: 70%;
-                                font-family: 'Heebo';
                                 color: #FFFFFF;
                                 transform: translate(-30%, -30%);
                                 text-align: center;
@@ -141,9 +145,13 @@
                                 max-width: 100%;
                                 flex-direction: row;
                                 justify-content: space-between;
+                                margin: 0 auto;
                                 opacity: 0;
 
                         }
+                        .reviewText {
+                                        text-align: center;
+                                }
 
 .reviewSection {
         display: flex;
@@ -152,10 +160,10 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        font-family: "Heebo";
         font-size: 1.5em;
         text-align: center;
         padding-left: 30px;
+        margin: 0 auto;
 }
 
 .discoverContainer {
@@ -165,7 +173,20 @@
         margin: 25px;
         flex-direction: column;
         opacity: 0;
+
+        
 }
+
+.amenitiesSubsection {
+                                margin: 0 auto;
+
+                        }
+.amenitiesText {
+                                        text-align: center;
+                                        padding: 10px;
+                                        font-size: 2em;
+                                }
+
 
 
 @media only screen and (max-width: 850px) {
@@ -242,8 +263,9 @@
                                 margin: 0 auto;
 
                         }
-                                .servicesText {
+                                .amenitiesText {
                                         text-align: center;
+                                        padding: 10px;
                                 }
                                 .amenitiesSubSection {
                                         display: block;
@@ -260,24 +282,29 @@
 
         </head>
         <body>
-                <nav>
-                        <a href="#default" class="logo">
-                        </a>
-                        <div class="navBarRight">
-                                <a href="#amenities">Amenities</a>
-                                <a href="#reviews">Reviews</a>
-                                <a href="food.html">Food Service</a>
-                                <a href="book.html">Book a Room</a>
-                                <a href="https://neisapatterson.github.io/midterm/contact.html">Contact Us</a>
-                                <a href="#explore">Explore</a>
-                        </div>
-                </nav>
-                <div id="header">
-                        <img src="./images/pexels-quark-studio-2507010.jpg">
-                        <h1 id="taglineText">When you stay with us, you're at home.</h1>
+                <a href="index.html">
+                        <img class="logo" src="logo.png" alt="">
+                </a>
+        <div id="headVid">
+                <img id="header" src="./images/pexels-quark-studio-2507010.jpg" />
+        </div>
+        <div class="header">
+                <div class="navBar">
+                        <ul class="navLinks">
+                                <li><a href="book.html">Book</a></li>
+                                <li><a href="food.html">Food</a></li>
+                                <li><a href="">Explore</a></li>
+                                <li><a href="">Reviews</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                        </ul>
                 </div>
+        </div>
+        <div class="title">
+                <h1>Grand Del Mar</h1>
+                <p>When you stay with us, you're at home.</p>
+        </div>
 
-                        <h2>Popular Offers</h2>
+                        <h2 style="text-align: center; padding:40px;">Popular Offers</h2>
                 <div class="homeContainer">
                         <div id="buyHome">
                         </div>
@@ -287,13 +314,14 @@
                         </div>  
                 </div> 
 
-                <div class="bookButton">
-                        <button class="button5" type="button">BOOK NOW</button>
+                <div class="bookBtn">
+                        <input type="button" value="Ready To Book?" onclick="book.html">
                 </div>
                 <div class="reviewContainer">
                         <img class="images" src="./images/ocean_room.jpg" alt="Hotel room with a beach view"/>
                         <div class="reviewSection">
-                                <p class="reviewText" style="display:block;">"Excellent location and service!" - Jason N. <br />
+                                <h2 style="padding: 10px;">Reviews</h2>
+                                <p class="reviewText">"Excellent location and service!" - Jason N. <br />
                                         <span class="fa fa-star checked"></span>
                                         <span class="fa fa-star checked"></span>
                                         <span class="fa fa-star checked"></span>
@@ -312,25 +340,25 @@
                                         <span class="fa fa-star checked"></span>
                                         <span class="fa fa-star checked"></span>
                                         <span class="fa fa-star checked"></span></p>
-                                <div class="bookButton">
-                                        <button class="button5" type="button">MORE REVIEWS</button>
-                                </div>
+                                        <div class="bookBtn">
+                                                <input type="button" value="Read More Reviews" onclick="book.html">
+                                        </div>
                         </div>
                 </div>
-                <h2>Amenities</h2>
+                <h2 style="text-align: center; padding: 10px;">Amenities</h2>
 
                 <div class="amenitiesSection">
                         <div class="amenitiesSubSection">
-                        <p class="servicesText">Free Buffet and Continental Breakfast</p>
-                        <p class="servicesText">3 On-Site Restaurants</p>
-                        <p class="servicesText">Catering Available</p>
-                        <a href="#food">Learn More About Food</a>
+                        <p class="amenitiesText">Free Buffet and Continental Breakfast</p>
+                        <p class="amenitiesText">3 On-Site Restaurants</p>
+                        <p class="amenitiesText">Catering Available</p>
+                        <a class="amenitiesText" href="#food">Learn More About Food</a>
                         </div>
                         <div class="amenitiesSubSection">
-                                <p class="servicesText">Indoor and Outdoor Pool</p>
-                                <p class="servicesText">Free Wifi</p>
-                                <p class="servicesText">Office Space</p>
-                                <a href="#food">Learn More About Amenities</a>
+                                <p class="amenitiesText">Indoor and Outdoor Pool</p>
+                                <p class="amenitiesText">Free Wifi</p>
+                                <p class="amenitiesText">Office Space</p>
+                                <a class="amenitiesText" href="#food">Learn More About Amenities</a>
                         </div>
                         <img  class="images" src="./images/gourmet-food.jpg" alt="A person serving food"/>
                 </div>
