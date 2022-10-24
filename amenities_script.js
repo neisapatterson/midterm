@@ -36,7 +36,7 @@
                         $(".slide0").fadeIn(600);
                 });
                 $(".slide1").fadeOut(600, function() {
-                        $(".slide1").attr("src", "./amenitiesMedia/" + carousel[curr_img + 1]);
+                        $(".slide1").attr("src", "midterm/amenitiesMedia/" + carousel[curr_img + 1]);
                         $(".slide1").fadeIn(600);
                 });
                 $(".slide2").fadeOut(600, function() {
