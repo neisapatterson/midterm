@@ -9,3 +9,17 @@
 .intro p {
     font-size: 20px;
 }
+
+.title {
+    width: 50%;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    color: white;
+    text-align: center;
+}
+
+.cheader img {
+    height: 120vh;
+    width: 100%;
+}
