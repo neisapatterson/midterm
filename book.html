@@ -24,11 +24,25 @@
                 new MenuItem("King size bed", 340),
                 new MenuItem("Family Suite", 500),
                 );
+
+                function makeSelect(name, minRange, maxRange)
+                {
+                        var t= "";
+                        t = "<select name='" + name + "' size='1' onchange='updateDollars()'>";
+                        for (j=minRange; j<=maxRange; j++)
+                        t += "<option>" + j + "</option>";
+                        t+= "</select>"; 
+                        return t;
+                }
+
+                function td(content, className="")
+                {
+                        return "<td class = '" + className + "'>" + content + "</td>";
+                }
              </script>
+        </head>
         <body>
-                <a href="index.html">
-                <img class="logo" src="logo.png" alt="">
-                </a>
+                <a class="home" href="index.html"><img class="logo" src="logo.png" alt=""></a>
                 <div id="headVid">
                 <img id="header" src="./images/pexels-quark-studio-2507010.jpg" />
                 </div>
@@ -48,7 +62,6 @@
                 <h1>Grand Del Mar</h1>
                 <p>Choose between our three room options</p>
         </div>
-
                     <h2 style="text-align: center; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;"
                     >Room Offers</h2>
             <div class="rooms">
@@ -96,7 +109,7 @@
             <p class="userInfo"><label>First Name:</label> <input type="text"  name='fname' /></p>
             <p class="userInfo"><label>Last Name*:</label>  <input type="text"  name='lname' /></p>
             <p class="userInfo"><label>Phone*:</label> <input type="text"  name='phone' /></p>
-
+            <p class="userInfo"><label>Email*:</label> <input type="text"  name='email' /></p>
             <table border="0" cellpadding="3">
                 <tr>
                   <th>Nights</th>
@@ -151,7 +164,9 @@
                          <script src="https://code.jquery.com/jquery-3.6.1.js" 
             integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
             crossorigin="anonymous">
+            </script>
             <script>
+                menu = ["Two full size beds", "One king size bed", "Family Suite"];
                 prices = [225, 230, 350];
                 quantotal = [0, 0, 0];
                 quanCount = [0, 0, 0];
@@ -160,6 +175,17 @@
                 subtotal = 0;
                 total = 0; 
                 tax = 0;
+
+                initialize();
+                // tags for writing errors
+                $("p.userInfo").eq(3).append("<p class='error'><p>");
+                $(".total.totalSection").append("<p class='errorTotal'><p>");
+                errorTag = $(".error");
+                errorTag.css("color", "red");
+
+                errorTag.hide();
+                errorTotal = $(".errorTotal");
+                errorTotal.hide();
 
                 function updateDollars() 
                 {
@@ -180,77 +206,73 @@
                 }
 
                 $(".button5").click(function() {
-                    if (isValidForm()) {
-                        alert("Thank you for your order! A text will be sent shortly")
-                    }
+                        if (isValidForm()) {
+                                alert("Thank you for your order! A text will be sent shortly");
+                                location.reload();
+                        }
                 });
+                $("input[name='lname']").change(function (){errorTag.hide(); errorTotal.hide();});
+                $("input[name='fname']").change(function (){errorTag.hide(); errorTotal.hide();});
+                $("input[name='phone']").change(function (){errorTag.hide(); errorTotal.hide();});
+                $("input[name='email']").change(function (){errorTag.hide(); errorTotal.hide();});
 
                 // initializes prices and hides delivery specific inputs
                 function initialize() {
-                $("input[name='cost']").val(0);
-                $("#subtotal").val(0);
-                $("#tax").val(0);
-                $("#total").val(0);
-                $(".userInfo.address").hide();
+                        $("input[name='cost']").val(0);
+                        $("#subtotal").val(0);
+                        $("#tax").val(0);
+                        $("#total").val(0);
+                        $(".userInfo.address").hide();
                 }
 
                 // once order is placed validate order
                 function isValidForm() {
-                if (!isValidPhone($("input[name='phone']").val())) {
-                    return printError("a valid phone number of 7 or 10 digits", "phone");
-                } else if (total == 0) {
-                    errorTotal.show();
-                    $("select").eq(0).focus();
-                    $(".errorTotal").text("*Please add at least one item to your cart"); 
-                    return false;
+                        if ($("input[name='lname']").val() == "") {
+                                return printError("your last name", "lname");
+                        } else if ($("input[name='phone']").val() == "") {
+                                return printError("your phone number", "phone");
+                        } else if (!isValidPhone($("input[name='phone']").val())) {
+                                return printError("a valid phone number of 7 or 10 digits", "phone");
+                        } else if ($("input[name='email']").val() == "") {
+                                return printError("your email address", "email");
+                        } else if (total == 0) {
+                                console.log("here");
+                                errorTotal.show();
+                                $("select").eq(0).focus();
+                                $(".errorTotal").text("*Please select at least one package"); 
+                                return false;
+                        }
+                        // remove error message
+                        errorTag.hide();
+                        errorTotal.hide();
+                        return true; 
                 }
-
-//                 // remove error message
-//                 errorTag.hide();
-//                 errorTotal.hide();
-//                 return true; 
-//                 }
 
                 // print error message passed in and focus box
                 function printError(message, tag) {
-                errorTag.show();
-                $("input[name='" + tag + "']").focus();
-                $(".error").text("*Please enter " + message);
-                return false;
+                        errorTag.show();
+                        $("input[name='" + tag + "']").focus();
+                        $(".error").text("*Please enter " + message);
+                        return false;
                 }
                 // sum all the digits (ignoring other chars) of the phone number
                 // make sure it equals 7 or 10
                 function isValidPhone(phone) {
-                digits = 0;
-                for (i = 0; i < phone.length; i++) {
-                if ($.isNumeric(phone[i])) { digits++;};
-                }
-                return ((digits == 7) || (digits == 10));
-                }
-
-
-                menu = ["Two full size beds", "One king size bed", 
-                "Family Suite"];
-
-
-                function makeSelect(name, minRange, maxRange)
-                {
-                var t= "";
-                t = "<select name='" + name + "' size='1' onchange='updateDollars()'>";
-                for (j=minRange; j<=maxRange; j++)
-                t += "<option>" + j + "</option>";
-                t+= "</select>"; 
-                return t;
+                        digits = 0;
+                        for (i = 0; i < phone.length; i++) {
+                                if ($.isNumeric(phone[i])) { digits++;};
+                        }
+                        return ((digits == 7) || (digits == 10));
                 }
 
-                function td(content, className="")
-                {
-                return "<td class = '" + className + "'>" + content + "</td>";
-                }
+                $(window).scroll(function() {
+                // checks if window is scrolled more than 750px, adds/removes solid class
+                        if($(this).scrollTop() > 200) { 
+                        $(".navBar").addClass("showNav");
+                        } else {
+                        $(".navBar").removeClass("showNav");
+                        }
+                });
             </script>
-
-</head>
-   
-    
     </body>
 </html>
