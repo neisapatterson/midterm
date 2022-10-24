@@ -31,6 +31,10 @@
                         
                 </script>
                 <style>
+                        .checked {
+  color: paleturquoise;
+  max-width: 800px;
+}
                         h2 {
                                 font-size: 50px;
                         }
@@ -173,8 +177,7 @@
         margin: 25px;
         flex-direction: column;
         opacity: 0;
-
-        
+        text-align: center;
 }
 
 .amenitiesSubsection {
@@ -246,11 +249,12 @@
                                 .reviewContainer {
                                         display: block;
                                         max-width: 100%;
+                                        text-align: center;
                                 }
-                                .reviewContainer img {
+                                /* .reviewContainer img {
                                         width: 100%;
                                         margin: 0 auto;
-                                }
+                                } */
                                 .reviewSection {
                                         left: 0%;
                                         padding-left: 0px;
@@ -261,6 +265,7 @@
                                 width: 100%;
                                 justify-content: center;
                                 margin: 0 auto;
+                                text-align: center;
 
                         }
                                 .amenitiesText {
@@ -270,12 +275,17 @@
                                 .amenitiesSubSection {
                                         display: block;
                                         text-align: center;
-
                                 }
 
                                 .images {
-                                        width:100%;
+                                        width:75%;
                                 }
+                                .title h1 {
+                font-size: 3em;  
+        }
+        .title p {
+                font-size: 1.5em;  
+        }
                         }
                 
                 </style>
@@ -291,10 +301,11 @@
         <div class="header">
                 <div class="navBar">
                         <ul class="navLinks">
+                                <li><a href="amenities.html">Amenities</a></li>
                                 <li><a href="book.html">Book</a></li>
                                 <li><a href="food.html">Food</a></li>
-                                <li><a href="">Explore</a></li>
-                                <li><a href="">Reviews</a></li>
+                                <li><a href="explore.html">Explore</a></li>
+                                <li><a href="reviews.html">Reviews</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                         </ul>
                 </div>
@@ -315,7 +326,9 @@
                 </div> 
 
                 <div class="bookBtn">
-                        <input type="button" value="Ready To Book?" onclick="book.html">
+                        <a href="book.html">
+                                <input type="button" value="Ready To Book?" onclick="book.html">
+                        </a>
                 </div>
                 <div class="reviewContainer">
                         <img class="images" src="./images/ocean_room.jpg" alt="Hotel room with a beach view"/>
@@ -341,7 +354,9 @@
                                         <span class="fa fa-star checked"></span>
                                         <span class="fa fa-star checked"></span></p>
                                         <div class="bookBtn">
-                                                <input type="button" value="Read More Reviews" onclick="book.html">
+                                                <a href="reviews.html">
+                                                        <input type="button" value="Read More Reviews">
+                                                </a>
                                         </div>
                         </div>
                 </div>
@@ -352,19 +367,29 @@
                         <p class="amenitiesText">Free Buffet and Continental Breakfast</p>
                         <p class="amenitiesText">3 On-Site Restaurants</p>
                         <p class="amenitiesText">Catering Available</p>
-                        <a class="amenitiesText" href="#food">Learn More About Food</a>
+                        <div class="bookBtn">
+                                <a href="food.html">
+                                <input type="button" value="Learn More About Food">
+                                </a>
+                        </div>
                         </div>
                         <div class="amenitiesSubSection">
                                 <p class="amenitiesText">Indoor and Outdoor Pool</p>
                                 <p class="amenitiesText">Free Wifi</p>
                                 <p class="amenitiesText">Office Space</p>
-                                <a class="amenitiesText" href="#food">Learn More About Amenities</a>
+                                <div class="bookBtn">
+                                        <a href="amenities.html">
+                                        <input type="button" value="Learn More About Amenities"> </a>
+                                </div>
                         </div>
-                        <img  class="images" src="./images/gourmet-food.jpg" alt="A person serving food"/>
+                        <img  style="width: 75%;"class="images" src="./images/gourmet-food.jpg" alt="A person serving food"/>
                 </div>
 
                 <div class="discoverContainer">
-                        <img class="images" id="discoverImage" src="./images/downtown-san-diego-bay.jpg" alt="downtown-san-diego-bay"/>
+                        <a href="explore.html">
+                                <img class="images" id="discoverImage" src="./images/downtown-san-diego-bay.jpg" alt="downtown-san-diego-bay"/>
+                </a>    
+
                         <h2>Discover Miami!</h2>
                 </div>
                 <div class="contact"></div>
