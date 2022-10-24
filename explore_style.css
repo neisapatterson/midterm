@@ -63,12 +63,36 @@ body {
     height: 400px;
 }
 
+.oneact p, .oneact h3{
+    margin-top: 4cm;
+    margin-left: 4cm;
+    margin-bottom: 2cm;
+    text-align: left;
+    font-size: 20px;
+}
+
 .twoact img{
     width: 600px;
     height: 400px;
 }
 
+.twoact p, .twoact h3{
+    margin-top: 4cm;
+    margin-left: 4cm;
+    margin-bottom: 2cm;
+    text-align: left;
+    font-size: 20px;
+}
+
 .threeact img{
     width: 600px;
     height: 400px;
+}
+
+.threeact p, .threeact h3{
+    margin-top: 4cm;
+    margin-left: 4cm;
+    margin-bottom: 2cm;
+    text-align: left;
+    font-size: 20px;
 }
