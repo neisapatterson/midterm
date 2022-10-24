@@ -3,11 +3,6 @@
     padding: 0;
 }
 
-body {
-    margin: auto;
-    text-align: center;
-}
-
 .logo {
     position: absolute;
     border-radius: 25px;
@@ -84,20 +79,42 @@ body {
 }
 
 .sendusheader {
+    font-size: 30px;
+    text-align: center;
+}
+
+.beforeform {
+    font-size: 25px;
     text-align: center;
 }
 
 .container {
     width: 100%;
+    text-align: center;
     padding-right: 15px;
     padding-left: 15px;
-    margin-top: 1.5cm;
+    margin-top: 1cm;
     margin-right: auto;
     margin-left: auto;
 }
 
-.form-item {
-    margin-top: 1em;
-    margin-bottom: 1em;
+
+.form-submission {
+    background-color:#d9cb9d;
+    border-top: 5px solid #9b8000;
+    padding: 35px;
+    border-radius: 30px;
+    margin: 3cm auto 8cm;
+    width: 700px;
+    box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
+   
 }
+
+.form-item {
+    display: block;
+    font-size: 16px;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
 
