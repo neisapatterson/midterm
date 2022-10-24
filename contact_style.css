@@ -73,12 +73,12 @@
     text-align: center;
 }
 
-.cheader img {
+#cheader img {
     height: 85vh;
     width: 100%;
 }
 
-.sendusheader {
+#sendusheader {
     text-align: center;
 }
 
