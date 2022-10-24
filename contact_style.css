@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body {
+    font-family: Arial;
+}
+
 .logo {
     position: absolute;
     border-radius: 25px;
@@ -80,6 +84,7 @@ nav a.currentPage {
     left: 25%;
     color: white;
     text-align: center;
+    font-size: 120px;
 }
 
 #ctaglineText {
@@ -93,7 +98,7 @@ nav a.currentPage {
 }
 
 .cheader img {
-    height: 85vh;
+    height: 120vh;
     width: 100%;
 }
 
@@ -135,4 +140,5 @@ nav a.currentPage {
     font-size: 1rem;
     margin-bottom: 5px;
 }
+
 
