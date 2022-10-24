@@ -1,13 +1,11 @@
         
-        carousel = ["food0.jpeg", "food1_sm.mov", "food2.jpeg", 
-                    "gym0.jpeg", "gym1_sm.mov", "gym2.jpeg",
+        carousel = ["food0.jpeg", "food1.mov", "food2.jpeg", 
+                    "gym0.jpeg", "gym1.mov", "gym2.jpeg",
                     "spa0.jpeg", "bar1.mov", "buis2.jpeg"]
         carouselTitle = ["Room Service", "Fitness Center", "And Many More..."];
         carouselP = ["Food made to perfection by our gourmet chefs brought directly to your room.",
                      "Never miss a workout with our state-of-the-art equipment",
                      "From complimentary massages to computers, and free WIFI, everything is at your disposal..."];
-        popUpShown = false;
-
         curr_img = 0;
 
         $("#arrow_r").click(function () {spin("foward");});
@@ -18,6 +16,12 @@
                 $(this).get(0).paused ? $(this).get(0).play() : $(this).get(0).pause();
         });
 
+        // start slide show on smaller devices
+        setInterval(function() {
+                if ($("#arrow_r").css("display") == "none") {
+                      spin("foward");
+                }
+        }, 7000);
 
         // change slide
         function spin(direction) {
