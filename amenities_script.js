@@ -1,7 +1,7 @@
         
-        carousel = ["food0.jpeg", "food1.mov", "food2.jpeg", 
-                    "gym0.jpeg", "gym1.mov", "gym2.jpeg",
-                    "spa0.jpeg", "bar1.mov", "buis2.jpeg"]
+        carousel = ["food0.jpeg", "food1_sm.mov", "food2.jpeg", 
+                    "gym0.jpeg", "gym1_sm.mov", "gym2.jpeg",
+                    "spa0.jpeg", "bar1_sm.mov", "buis2.jpeg"]
         carouselTitle = ["Room Service", "Fitness Center", "And Many More..."];
         carouselP = ["Food made to perfection by our gourmet chefs brought directly to your room.",
                      "Never miss a workout with our state-of-the-art equipment",
@@ -36,7 +36,7 @@
                         $(".slide0").fadeIn(600);
                 });
                 $(".slide1").fadeOut(600, function() {
-                        $(".slide1").attr("src", carousel[curr_img + 1]);
+                        $(".slide1").attr("src", "./amenitiesMedia/" + carousel[curr_img + 1]);
                         $(".slide1").fadeIn(600);
                 });
                 $(".slide2").fadeOut(600, function() {
