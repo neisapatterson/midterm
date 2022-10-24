@@ -250,3 +250,23 @@
 .footLinks li:hover {
         width: 100%;
 }
+.footLinks_contact {
+        text-align: center;
+        position: relative;
+}
+
+.footLinks_contact { 
+        padding-top: 80px;
+        z-index: 1000;
+        position: relative;
+        bottom: 0;
+}
+.footLinks_contact{
+        color: white;
+}
+
+.footLinks_contact li{
+        color: white;
+        display: block;
+        padding-bottom: 10px;
+}
