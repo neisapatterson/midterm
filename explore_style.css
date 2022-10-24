@@ -52,47 +52,45 @@ body {
     font-size: 20px;
 }
 
-.oneact {
-    width: 200px;
-    margin-top: 1cm;
-    padding-left: 50px;
-}
-
-.oneact img{
+.oneact img {
     width: 600px;
     height: 400px;
+    padding-right: 25px;
+    float: left;
 }
 
-.oneact p, .oneact h3{
-    margin-top: 4cm;
-    margin-left: 4cm;
-    margin-bottom: 2cm;
-    text-align: left;
+.oneact p {
+    padding-top: 160px;
+    text-align: center;
     font-size: 20px;
 }
 
 .twoact img{
+    margin-top: 3cm;
     width: 600px;
     height: 400px;
+    padding-right: 25px;
+    float: right;
 }
 
-.twoact p, .twoact h3{
-    margin-top: 4cm;
-    margin-left: 4cm;
-    margin-bottom: 2cm;
-    text-align: left;
+.twoact p {
+    padding-top: 250px;
+    padding-left: 150px;
+    width: 400px;
+    text-align: center;
     font-size: 20px;
 }
 
-.threeact img{
+.threeact img {
+    margin-top: 3cm;
     width: 600px;
     height: 400px;
+    padding-right: 25px;
+    float: left;
 }
 
-.threeact p, .threeact h3{
-    margin-top: 4cm;
-    margin-left: 4cm;
-    margin-bottom: 2cm;
-    text-align: left;
+.threeact p{
+    padding-top: 300px;
+    text-align: center;
     font-size: 20px;
 }
