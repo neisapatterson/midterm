@@ -38,24 +38,26 @@
         <div class="sendusheader">
             <h2>Send Us a Message</h2>
         </div>
-        <p> For hotel reservations, call 833-555-8284 or</p><a href = "https://neisapatterson.github.io/midterm/book.html" target = "_self">book online.</a>
-        <p>For your safety and security, rates are not quoted via the form below.</p></p>
+        <div class="beforeform">
+            <p> For hotel reservations, call 833-555-8284 or</p><a href = "https://neisapatterson.github.io/midterm/book.html" target = "_self">book online.</a>
+            <p>For your safety and security, rates are not quoted via the form below.</p></p>
+        </div>
         <div class="container">
-            <form action="/action_page.php">
+            <form class="form-submission">
                 <div class="form-item">
-                        <label for="fname">First Name</label>
+                        <label for="fname">First Name</label><br>
                         <input type="text" id="fname" name="firstname" placeholder="Your name..">
                 </div>
                 <div class="form-item">
-                        <label for="lname">Last Name</label>
+                        <label for="lname">Last Name</label><br>
                         <input type="text" id="lname" name="lastname" placeholder="Your last name..">
                 </div>
                 <div class="form-item">
-                        <label for="email">Email</label>
+                        <label for="email">Email</label><br>
                         <input type="text" id="email" name="email" placeholder="Your email..">
                 </div>
                 <div class="form-item">
-                        <label for="reason">Reason for Reaching Out</label>
+                        <label for="reason">Reason for Reaching Out</label><br>
                             <select id="reason" name="reason">
                             <option value="question">Question</option>
                             <option value="comment">Comment</option>
@@ -63,7 +65,7 @@
                             </select>
                 </div>
                 <div class="form-item">
-                        <label for="subject">Comments / Special Requests</label>
+                        <label for="subject">Comments / Special Requests</label><br>
                         <textarea id="subject" name="subject" placeholder="..." style="height:200px"></textarea>
                 </div>
                 <input type="submit" value="Submit">
