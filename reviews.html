@@ -1,10 +1,15 @@
 <html>
         <head>
                 <title>Reviews</title>
-                <link rel="stylesheet" href="styles.css">
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <meta charset="UTF-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <meta name="description" content="Grand Del Mar Suites and Resort located in Miami, Florida">
+                <meta name="keywords" content="Hotel, Beach, Miami, Amenities, Suites, Resort">
+                <link rel="stylesheet" href="amenities_style.css">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                <script src="amenities_script.js"></script>
                 <script>
                         $(document).ready(function(){
                                 $(function(){
@@ -70,7 +75,7 @@ body {
 }
 
 .checked {
-  color: #1768eb;
+  color:  paleturquoise;
   max-width: 800px;
 }
 
@@ -82,6 +87,15 @@ body {
         margin-top: 10px;
         margin-top: 10px;
 
+}
+
+.review {
+        border-style: solid;
+        border-radius: 25px;
+        padding: 20px;
+        border-color: rgb(80, 237, 237);
+
+        
 }
 @media only screen and (max-width: 850px) {
                                 body {
@@ -174,24 +188,31 @@ body {
 
         </head>
         <body>
-                <nav>
-                        <a href="#default" class="logo">
-                        </a>
-                        <div class="navBarRight">
-                                <a href="#amenities">Amenities</a>
-                                <a href="#reviews">Reviews</a>
-                                <a href="#food">Food Service</a>
-                                <a href="#book">Book a Room</a>
-                                <a href="#explore">Explore</a>
-                        </div>
-                </nav>
-                <div id="header">
-                        <img src="./images/pexels-donald-tong-189296.jpg">
-                        <h1 id="taglineText">When you stay with us, you're at home.</h1>
+                <a href="index.html">
+                        <img class="logo" src="logo.png" alt="">
+                </a>
+        <div id="headVid">
+                <img id="header" src="./images/pexels-quark-studio-2507010.jpg" />
+        </div>
+        <div class="header">
+                <div class="navBar">
+                        <ul class="navLinks">
+                                <li><a href="amenities.html">Amenities</a></li>
+                                <li><a href="book.html">Book</a></li>
+                                <li><a href="food.html">Food</a></li>
+                                <li><a href="explore.html">Explore</a></li>
+                                <li><a href="reviews.html">Reviews</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                        </ul>
                 </div>
+        </div>
+        <div class="title">
+                <h1>Grand Del Mar</h1>
+                <p>It's not just us that want you to stay.</p>
+        </div>
 
                 <div class="reviewSlideshow">
-                        <div>
+                        <div class="review">
                                 <span class="heading">Shaunice M</span>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
@@ -199,11 +220,11 @@ body {
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
                                 <h2>Excellent accommodations in Downtown Miami</h2>
+                                <br />
                                 <p>Mr Pickett displayed exemplary customer service to everyone I saw interact with him. He was polite, helpful and a very good example of what it means to provide fine hospitality. Highly Recommend Grand Del Mar!</p>
-                                <hr style="border:3px solid #f1f1f1">
                         </div>
 
-                        <div>
+                        <div class="review">
                                 <span class="heading">Mia J</span>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
@@ -211,10 +232,10 @@ body {
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
                                 <h2>Honeymoon in Miami</h2>
+                                <br />
                                 <p>We had the best time and service at Grand Del Mar Hotel when we were in Miami for our honeymoon. We got a lovely room and the staff were super friendly. All we want to do is to go back, asap! This hotel has that “little extra” and gives you a five star experience. Beautiful pools, rooms, lobby, and spa. We liked that it was in a quiet area and you can easily take an Uber to South beach/down town. Thank you for everything!</p>
-                                <hr style="border:3px solid #f1f1f1">
                         </div>
-                <div>
+                <div class="review">
                         <span class="heading">Hugo K</span>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
@@ -222,10 +243,10 @@ body {
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                         <h2>Buena Habitación</h2>
+                        <br />
                         <p>Everything is perfect, is it amazing to be here, the personel helps, and be very worries for all, for a good, specially Sekene, Kai & Héctor. I have a complimentary upgrade to a just with a good view, thank you guys!</p>
-                        <hr style="border:3px solid #f1f1f1"> 
                 </div>
-                <div>
+                <div class="review">
                         <span class="heading">Emily O</span>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
@@ -233,10 +254,10 @@ body {
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                         <h2>Wonderful hospitality at Grand Del Mar</h2>
+                        <br />
                         <p>I had the most excellent staff experience at this beautiful hotel. The catering staff at our conference and the people working at the pool and beach and front desk and restaurant made me feel at home. Shout out to Jon-Paul, Kevin, and Santiago as some of many who showed great hospitality. Mil Gracias!</p>
-                        <hr style="border:3px solid #f1f1f1"> 
                 </div>
-                <div>
+                <div class="review">
                         <span class="heading">Marlene C</span>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
@@ -244,8 +265,9 @@ body {
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                         <h2>Amazing Mami Beach Hotel Experience With Spectacular Costumer Service</h2>
-                        <p>From the moment we arrived at the Valet parking and throughout our spectacular stay we experienced the most amazing mini Vacation at Nobu Hotel Miami.. Pool was beautiful and peaceful as well as the staff catering to your needs.. Three weeks ago we had a terrible experience at the Fountainebleau Hotel where we were incredibly disappointed with the very poor costumer service.. We are very happy we found this hotel and expect to return very soon… Also on Fridays and Saturdays they offer guests a Kanpai Hour Exclusive where they have complimentary wine and champagne with some appetizers to enjoy while socializing.. Alejandro and Paulo ensured each guest received first class service.. I Totally love this hotel and the facilities. Will definitely be back.</p>
-                        <hr style="border:3px solid #f1f1f1"> 
+                        <br />
+
+                        <p>From the moment we arrived at the Valet parking and throughout our spectacular stay we experienced the most amazing mini Vacation at Grand Del Mar. Pool was beautiful and peaceful as well as the staff catering to your needs.. Three weeks ago we had a terrible experience at the Fountainebleau Hotel where we were incredibly disappointed with the very poor costumer service.. We are very happy we found this hotel and expect to return very soon… Also on Fridays and Saturdays they offer guests a Kanpai Hour Exclusive where they have complimentary wine and champagne with some appetizers to enjoy while socializing.. Alejandro and Paulo ensured each guest received first class service.. I Totally love this hotel and the facilities. Will definitely be back.</p>
                 </div>
                 </div>
                 <div class="awards">
