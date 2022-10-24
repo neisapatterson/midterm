@@ -10,6 +10,9 @@
 
         $("#arrow_r").click(function () {spin("foward");});
         $("#arrow_l").click(function () {spin("back");});
+        $(".bookBtn").click(function () {window.location.href="book.html";});
+        $(".exploreBtn").click(function () {window.location.href="explore.html";});
+
 
         // toggle play and pause when videos are clicked
         $("video").click(function () {
