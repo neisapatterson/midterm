@@ -1,0 +1,255 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Grand Del Mar Suites and Resort located in Miami, Florida">
+        <meta name="keywords" content="Hotel, Beach, Miami, Amenities, Suites, Resort">
+        <title>Grand Del Mar - Food Services</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="food.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/55d0223fcd.js" crossorigin="anonymous"></script>
+        <link href="logo.ico" rel="icon" type="image/x-icon"/>
+        <script>
+            function MenuItem(name, cost)
+            {
+            this.name = name;
+            this.cost=cost;
+            }
+
+            menuItems = new Array(
+            new MenuItem("Lunch Tickets", 65),
+            new MenuItem("Dinner Tickets", 95),
+            );
+
+            prices = [65, 95];
+            quantotal = [0, 0];
+            quanCount = [0, 0];
+            orderInfo = [0, 0]; 
+            itemInfo = [];
+            isPickup = true;
+            subtotal = 0;
+            total = 0; 
+            tax = 0;
+
+            function updateDollars() 
+            {
+                subtotal = 0;
+                for (i = 0; i < menuItems.length; i++) {
+                size = document.getElementsByName("quan" + i)[0].value;
+                if (parseInt(size) != 0) {
+                costs = (parseInt(size) * menuItems[i].cost).toFixed(2);
+                document.getElementsByName("cost")[i].value = costs;
+                subtotal += parseFloat(costs);
+                }
+                }
+
+                subtotal = subtotal;
+                tax = (subtotal * 0.0600);
+                total = subtotal + tax;
+                document.getElementById("subtotal").value = subtotal.toFixed(2);
+                document.getElementById("tax").value = tax.toFixed(2);
+                document.getElementById("total").value = total.toFixed(2);
+            }
+
+            // when submit is clicked, get timeEstimate and order is being placed
+            $("input[type='button']").click(function() {
+                if (isValidForm()) {
+                    alert("Thank you for your order! A text will be sent shortly")
+                }
+            });
+
+            // initializes prices and hides delivery specific inputs
+            function initialize() {
+            $("input[name='cost']").val(0);
+            $("#subtotal").val(0);
+            $("#tax").val(0);
+            $("#total").val(0);
+            $(".userInfo.address").hide();
+            }
+
+            // once order is placed validate order
+            function isValidForm() {
+            // requirements for both pickup and delivery
+        
+            if (!isValidPhone($("input[name='phone']").val())) {
+                return printError("a valid phone number of 7 or 10 digits", "phone");
+            } else if (total == 0) {
+                errorTotal.show();
+                $("select").eq(0).focus();
+                $(".errorTotal").text("*Please add at least one item to your cart"); 
+                return false;
+            }
+
+            // remove error message
+            errorTag.hide();
+            errorTotal.hide();
+            return true; 
+            }
+
+            // print error message passed in and focus box
+            function printError(message, tag) {
+            errorTag.show();
+            $("input[name='" + tag + "']").focus();
+            $(".error").text("*Please enter " + message);
+            return false;
+            }
+            // sum all the digits (ignoring other chars) of the phone number
+            // make sure it equals 7 or 10
+            function isValidPhone(phone) {
+            digits = 0;
+            for (i = 0; i < phone.length; i++) {
+            if ($.isNumeric(phone[i])) { digits++;};
+            }
+            return ((digits == 7) || (digits == 10));
+            }
+
+
+            function makeSelect(name, minRange, maxRange)
+            {
+            var t= "";
+            t = "<select name='" + name + "' size='1' onchange='updateDollars()'>";
+            for (j=minRange; j<=maxRange; j++)
+            t += "<option>" + j + "</option>";
+            t+= "</select>"; 
+            return t;
+            }
+
+            function td(content, className="")
+            {
+            return "<td class = '" + className + "'>" + content + "</td>";
+            }
+        </script>
+    </head>
+    <body>
+        <a href="index.html">
+            <img class="logo" src="logo.png" alt="">
+            </a>
+            <div id="headVid">
+            <img id="header" src="./images/pexels-quark-studio-2507010.jpg" />
+            </div>
+            <div class="header">
+            <div class="navBar">
+            <ul class="navLinks">
+            <li><a href="amenities.html">Amenities</a></li>
+            <li><a href="book.html">Book</a></li>
+            <li><a href="food.html">Food</a></li>
+            <li><a href="explore.html">Explore</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            </ul>
+    </div>
+    </div>
+    <div class="title">
+            <h1>Grand Del Mar</h1>
+            <p>Food freshley prepared for you!</p>
+    </div>
+
+        <br> <br> <br>
+            <div id="menu">
+
+                <h2>Here are Grand Del Mar, we treat our customers with the upmost quality
+                    food we can provide. Fresh produce, freshly kneaded pasta dough, locally
+                    grown fruites and veggies, you name it, we got it. With all room packages,
+                    a complimentary breakfast is provided free of charge. Enjoy our hot bar,
+                    hot breakfast foods (including but not limited to pancakes, eggs made your way
+                    , bacon, oatmeal, etc.), freshed pressed fruit juices and even more. 
+                </h2>
+
+                    <div id="picture1">
+                   </div>
+            </div> 
+
+            <br> <br> <br>
+            <div id="menu">
+
+                <div id="picture2">
+                </div>
+
+                <h2>Our speciality lunch services is available to everyone for purchase
+                    but included in the family package. During the lunch services, our 
+                    menu is never the same. Our chef's are inspired to get creative with 
+                    their dishes. Food can be order freshly from the offered menu or 
+                    if you have a special request, the chef's are more than happy to 
+                    cook per request. An open salad and soup bar is included during 
+                    the lunch period. 
+                </h2>
+
+            </div> 
+            <br><br><br>
+
+            <div id="menu">
+
+                <div id="picture3">
+                </div>
+
+            </div> 
+
+            <h2>Our dinner is award winning across all resorts in the Miami area. 
+                Not only does the dinner include everything that the lunch service provides,
+                but you also get access to our unlimited sushi bar, mochi icecream bar,
+                hotpot station, and Korean BBQ pits. Dinner also comes with access to our open
+                bar open 24 hours. 
+            </h2>
+
+            <br><br><br>
+
+
+
+            <p class="userInfo"><label>First Name:</label> <input type="text"  name='fname' /></p>
+            <p class="userInfo"><label>Last Name*:</label>  <input type="text"  name='lname' /></p>
+            <p class="userInfo"><label>Phone*:</label> <input type="text"  name='phone' /></p>
+
+            <table border="0" cellpadding="3">
+                <tr>
+                  <th>Orders</th>
+                  <th>Dish</th>
+                  <th>Cost</th>
+                  <th>Total Cost</th>
+                </tr>
+              <script>
+              
+                var s = "";
+                for (i=0; i< menuItems.length; i++)
+                {
+                    s += "<tr>";
+                    s += td(makeSelect("quan" + i, 0, 10),"selectQuantity");
+                    s += td(menuItems[i].name, "itemName");
+                    s += td("$" +menuItems[i].cost.toFixed(2), "cost");
+                    s += td("$<input type='text' name='cost'/>", "totalCost");
+                    s+= "</tr>";
+                }
+                document.writeln(s);
+              </script>
+            </table>
+            <p class="subtotal totalSection"><label>Subtotal</label>: 
+            $ <input type="text"  name='subtotal' id="subtotal" />
+            </p>
+            <p class="tax totalSection"><label>Florida tax 6.00%:</label>
+            $ <input type="text"  name='tax' id="tax" />
+            </p>
+            <p class="total totalSection"><label>Total:</label> $ <input type="text"  name='total' id="total" />
+            </p>
+
+            <div class="bookButton">
+                    <button class="button5" type="button">PLACE ORDER</button>
+            </div>
+
+            <div class="footer">
+                <ul class="footLinks_contact">
+                        <li><i class="fa-solid fa-copyright"></i></i> 2022 Grand Del Mar Suites and Resort</li>
+                        <li><i class="fa-solid fa-envelope"></i> info@granddelmar.com</li>
+                        <li><i class="fa-solid fa-square-phone"></i></i> 833-555-8284</li>
+                </ul>
+                <ul class="footLinks">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="book.html">Book A Room</a></li>
+                        <li><a href="food.html">Food</a></li>
+                        <li><a href="explore.html">Explore</a></li>
+                        <li><a href="review.html">Reviews</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+    </body>
+</html>
