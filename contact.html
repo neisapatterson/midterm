@@ -1,137 +1,77 @@
-* {
-    margin: 0;
-    padding: 0;
-}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grand Del Mar - Contact Us</title>
+        <link rel="stylesheet" href="contact_style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="logo.ico" rel="icon" type="image/x-icon"/>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <a href="index.html">
+            <img class="logo" src="logo.png" alt="">
+        </a>
+        <nav>
+            <a href="#default" class="logo">
+                    <!-- <img src="./images/Marriott_hotels_logo14.svg.png"> -->
+            </a>
+            <div class="navBar">
+                <ul class="navLinks">
+                    <li><a href="https://neisapatterson.github.io/midterm/amenities.html">Amenities</a></li>
+                    <li><a href="https://neisapatterson.github.io/midterm/reviews.html">Reviews</a></li>
+                    <li><a href="https://neisapatterson.github.io/midterm/food.html">Food Service</a></li>
+                    <li><a href="https://neisapatterson.github.io/midterm/book.html">Book a Room</a></li>
+                    <li><a href="https://neisapatterson.github.io/midterm/contact.html">Contact</a></li>
+                    <li><a href="#explore">Explore</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class ="title">
+            <h1>Grand Del Mar</h1>
+        </div>
+        <div class="cheader">
+            <img src="./images/contacts.jpg">
+            <h1 id="ctaglineText">Our hotel is a second home -- only you get to escape.</h1>
+        </div>
 
-.logo {
-    position: absolute;
-    border-radius: 25px;
-    width: 6%;
-    margin-top: 20px;
-    margin-left: 30px;
-}
-
-/* nav bar */
-
-.navBar{
-    position: fixed;
-    top: 0;
-    right: 0;
-    display: right;
-    width: 100vw;
-    padding: 1% 3%;
-    justify-content: space-between;
-    align-items: center; 
-}
-
-/* Change the background color on mouse-over */
-nav a:hover {
-    color: rgba(0,0,0,0.5);
-  }
-
-nav a.currentPage {
-    background-color: dodgerblue;
-    color: #FFFFFF;
-}
-
-.navLinks {
-    flex: 1;
-    text-align: right;
-}
-
-.navLinks li {
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
-}
-
-.navLinks a {
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
-}
-
-.navLinks li::after {
-    content: '';
-    width: 0%;
-    height: 2px;
-    background-color: white;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-}
-
-.navLinks li:hover::after {
-    width: 100%;
-}
-
-/* when scrolling */
-.showNav {
-    background-color: paleturquoise;
-    z-index: 500;
-    transition: background-color 1s ease 0s;
-}
-
-.title {
-    width: 50%;
-    position: absolute;
-    top: 25%;
-    left: 25%;
-    color: white;
-    text-align: center;
-}
-
-#ctaglineText {
-    position: absolute;
-    top: 75%;
-    left: 70%;
-    font-family: 'Heebo';
-    color: #FFFFFF;
-    transform: translate(-30%, -30%);
-    text-align: center;
-}
-
-.cheader img {
-    height: 85vh;
-    width: 100%;
-}
-
-.sendusheader {
-    font-size: 30px;
-    text-align: center;
-}
-
-.beforeform {
-    font-size: 25px;
-    text-align: center;
-}
-
-.container {
-    width: 100%;
-    text-align: center;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-top: 1cm;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-
-.form-submission {
-    background-color:#d9cb9d;
-    border-top: 5px solid #9b8000;
-    padding: 35px;
-    border-radius: 30px;
-    margin: 3cm auto 8cm;
-    width: 700px;
-    box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
-   
-}
-
-.form-item {
-    display: block;
-    font-size: 16px;
-    font-size: 1rem;
-    margin-bottom: 5px;
-}
+        <div class="sendusheader">
+            <h2>Send Us a Message</h2>
+        </div>
+        <div class="beforeform">
+            <p> For hotel reservations, call 833-555-8284 or</p><a href = "https://neisapatterson.github.io/midterm/book.html" target = "_self">book online.</a>
+            <p>For your safety and security, rates are not quoted via the form below.</p></p>
+        </div>
+        <div class="container">
+            <form class="form-submission">
+                <div class="form-item">
+                        <label for="fname">First Name</label><br>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                </div>
+                <div class="form-item">
+                        <label for="lname">Last Name</label><br>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                </div>
+                <div class="form-item">
+                        <label for="email">Email</label><br>
+                        <input type="text" id="email" name="email" placeholder="Your email..">
+                </div>
+                <div class="form-item">
+                        <label for="reason">Reason for Reaching Out</label><br>
+                            <select id="reason" name="reason">
+                            <option value="question">Question</option>
+                            <option value="comment">Comment</option>
+                            <option value="complaint">Complaint</option>
+                            </select>
+                </div>
+                <div class="form-item">
+                        <label for="subject">Comments / Special Requests</label><br>
+                        <textarea id="subject" name="subject" placeholder="..." style="height:200px"></textarea>
+                </div>
+                <input type="submit" value="Submit">
+            </form>
+    </div>
+    </body>
+</html>
