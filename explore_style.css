@@ -2,6 +2,10 @@
     text-align: center;
 }
 
+body {
+    font: Arial;
+}
+
 .intro h1 {
     font-size: 80px;
 }
@@ -22,4 +26,29 @@
 .cheader img {
     height: 120vh;
     width: 100%;
+}
+
+.mus {
+    text-align: left;
+    float: left;
+}
+
+.mus h1{
+    font-size: 56px;
+}
+
+.mus img{
+    width: 100%;
+    height: auto;
+}
+
+.mus p{
+    text-align: left;
+}
+
+.oneact {
+    float: left;
+    width: 200px;
+    margin-left: 1cm;
+    padding-left: 50px;
 }
