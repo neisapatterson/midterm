@@ -118,6 +118,29 @@
 
 
 /* beach */
+.exploreBtn {
+        margin: 40px;
+}
+
+.exploreBtn input {
+        border-radius: 25px;
+        font-size: 18px;
+        width: 300px;
+        height: 50px;
+        margin: 10px;
+        padding: 10px;
+        border: none;
+        position: relative;
+        cursor: pointer;
+        color: white;
+        background-color: rgb(12, 212, 212); 
+}
+
+.exploreBtn input:hover {
+        background-color: rgb(80, 237, 237); 
+        transition: 0.5s;
+}
+
 .resort {
         height: 530px;
         background-color: white;
