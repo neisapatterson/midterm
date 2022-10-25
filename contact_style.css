@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body {
+    font-family: Arial;
+}
+
 .logo {
     position: absolute;
     border-radius: 25px;
@@ -194,7 +198,7 @@ nav a.currentPage {
 }
 
 .mapTitle p {
-    font-size: 15px;
+    font-size: 30px;
     margin-bottom: 1cm;
 }
 
