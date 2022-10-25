@@ -41,7 +41,9 @@ body {
     width: 600px;
     height: 400px;
     padding-right: 25px;
+    margin-left: 1cm;
     float: left;
+    border-radius: 15px;
 }
 
 .mus p{
@@ -52,17 +54,26 @@ body {
     font-size: 20px;
 }
 
+.activities h1{
+    font-size: 56px;
+    margin-left: 1cm;
+}
+
 .oneact img {
     width: 600px;
     height: 400px;
     padding-right: 25px;
+    margin-top: 1cm;
+    margin-left: 1cm;
     float: left;
+    border-radius: 15px;
 }
 
 .oneact p {
     padding-top: 160px;
     text-align: center;
     font-size: 20px;
+    margin-right: 1cm;
 }
 
 .twoact img{
@@ -70,7 +81,9 @@ body {
     width: 600px;
     height: 400px;
     padding-right: 25px;
+    margin-right: 2cm;
     float: right;
+    border-radius: 15px;
 }
 
 .twoact p {
@@ -79,6 +92,7 @@ body {
     width: 400px;
     text-align: center;
     font-size: 20px;
+    margin-right: 1cm;
 }
 
 .threeact img {
@@ -87,6 +101,8 @@ body {
     height: 400px;
     padding-right: 25px;
     float: left;
+    border-radius: 15px;
+    margin-left: 1cm;
 }
 
 .threeact p{
@@ -94,3 +110,4 @@ body {
     text-align: center;
     font-size: 20px;
 }
+
