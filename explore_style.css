@@ -50,8 +50,8 @@ body {
     margin-top: 4cm;
     margin-left:4cm;
     margin-bottom: 2cm;
-    text-align: left;
-    font-size: 20px;
+    text-align: center;
+    font-size: 28px;
 }
 
 .activities h1{
@@ -70,11 +70,10 @@ body {
 }
 
 .oneact p {
-    margin-top: 4cm;
-    margin-left:4cm;
-    margin-bottom: 2cm;
+    padding-top: 160px;
     text-align: center;
-    font-size: 28px;
+    font-size: 30px;
+    margin-right: 1cm;
 }
 
 .twoact img{
@@ -111,5 +110,6 @@ body {
     text-align: center;
     font-size: 25px;
 }
+
 
 
